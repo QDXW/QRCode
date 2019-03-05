@@ -28,7 +28,8 @@ SOURCES += main.cpp\
     QRCodelib/qrspec.c \
     QRCodelib/rscode.c \
     QRCodelib/split.c \
-    CRC/CRC16.c
+    CRC/CRC16.c \
+    password.cpp
 
 HEADERS  += mainwindow.h \
     QRCodelib/bitstream.h \
@@ -43,9 +44,11 @@ HEADERS  += mainwindow.h \
     QRCodelib/split.h \
     QRCodelib/config.h \
     CRC/Common.h \
-    CRC/CRC16.h
+    CRC/CRC16.h \
+    password.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    password.ui
 
 RESOURCES += \
     image.qrc

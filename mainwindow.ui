@@ -28,7 +28,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QTabWidget" name="tabWidget">
@@ -72,7 +72,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>12</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH1_threshold1">
@@ -85,7 +85,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>30</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="CheckBox1">
@@ -111,7 +111,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>AMP</string>
+         <string>THC</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH1_label4">
@@ -188,7 +188,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
       </widget>
@@ -206,7 +206,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH2_name">
@@ -219,7 +219,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>COC</string>
+         <string>OPI</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH2_label2">
@@ -248,7 +248,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>50</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH2_threshold2">
@@ -261,7 +261,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>15</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="CheckBox2">
@@ -2641,352 +2641,6 @@
        <string>切换至S100</string>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>10</y>
-        <width>311</width>
-        <height>492</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <property name="spacing">
-        <number>18</number>
-       </property>
-       <item>
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="16" column="0">
-          <widget class="QLabel" name="Information_label17">
-           <property name="text">
-            <string>步长</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="18" column="0">
-          <widget class="QLabel" name="Information_label19">
-           <property name="text">
-            <string>C线最小值</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="Information_label2">
-           <property name="text">
-            <string>生产批号</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="Information_label6">
-           <property name="text">
-            <string>基线-C线和边界</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="Information_label8">
-           <property name="text">
-            <string>基线-C线和T1线2</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="Information_label10">
-           <property name="text">
-            <string>试剂卡条数</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="0">
-          <widget class="QLabel" name="Information_label12">
-           <property name="text">
-            <string>T线的搜索范围</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="0">
-          <widget class="QLabel" name="Information_label16">
-           <property name="text">
-            <string>使能约束</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="17" column="0">
-          <widget class="QLabel" name="Information_label18">
-           <property name="text">
-            <string>幅度</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="Information_label3">
-           <property name="text">
-            <string>反应时间</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="Information_label4">
-           <property name="text">
-            <string>C线中心位置</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="Information_label5">
-           <property name="text">
-            <string>T1到C线中心位置</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="Information_label1">
-           <property name="text">
-            <string>试剂卡名称</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="Information_label7">
-           <property name="text">
-            <string>基线-C线和T1线1</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLabel" name="Information_label9">
-           <property name="text">
-            <string>基线-T线和边界</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="0">
-          <widget class="QLabel" name="Information_label11">
-           <property name="text">
-            <string>C线的搜索范围</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="0">
-          <widget class="QLabel" name="Information_label15">
-           <property name="text">
-            <string>平均窗口</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="0">
-          <widget class="QLabel" name="Information_label13">
-           <property name="text">
-            <string>C线的计算半径</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="13" column="0">
-          <widget class="QLabel" name="Information_label14">
-           <property name="text">
-            <string>T线的计算半径</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="ProductType_Name">
-           <property name="text">
-            <string>Drug_Test</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLineEdit" name="ProductSN">
-           <property name="text">
-            <string>20180724</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLineEdit" name="time">
-           <property name="text">
-            <string>1</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLineEdit" name="Center_LineC">
-           <property name="text">
-            <string>40</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLineEdit" name="T1_Ccenter">
-           <property name="text">
-            <string>60</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLineEdit" name="base_CAndEdge">
-           <property name="text">
-            <string>25</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLineEdit" name="base_CAndT1_1">
-           <property name="text">
-            <string>31</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLineEdit" name="base_CAndT1_2">
-           <property name="text">
-            <string>31</string>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLineEdit" name="base_TAndEdge">
-           <property name="text">
-            <string>95</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLineEdit" name="ProductNum">
-           <property name="text">
-            <string>8</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="0">
-          <widget class="QLineEdit" name="SearchHalfRadius_C">
-           <property name="text">
-            <string>30</string>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="0">
-          <widget class="QLineEdit" name="SearchHalfRadius_T">
-           <property name="text">
-            <string>7</string>
-           </property>
-          </widget>
-         </item>
-         <item row="13" column="0">
-          <widget class="QLineEdit" name="AreaC_HalfRadius">
-           <property name="text">
-            <string>22</string>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="0">
-          <widget class="QLineEdit" name="AreaT_HalfRadius">
-           <property name="text">
-            <string>14</string>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="0">
-          <widget class="QLineEdit" name="WinSize">
-           <property name="text">
-            <string>10</string>
-           </property>
-          </widget>
-         </item>
-         <item row="16" column="0">
-          <widget class="QLineEdit" name="LimitEnabled">
-           <property name="text">
-            <string>1</string>
-           </property>
-          </widget>
-         </item>
-         <item row="17" column="0">
-          <widget class="QLineEdit" name="C_StepSize">
-           <property name="text">
-            <string>3</string>
-           </property>
-          </widget>
-         </item>
-         <item row="18" column="0">
-          <widget class="QLineEdit" name="C_Magnitude">
-           <property name="text">
-            <string>5</string>
-           </property>
-          </widget>
-         </item>
-         <item row="19" column="0">
-          <widget class="QLineEdit" name="C_Min">
-           <property name="text">
-            <string>3000</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
      <widget class="QTextBrowser" name="textBrowser_4">
       <property name="geometry">
        <rect>
@@ -3010,13 +2664,412 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;生产批号：八位数字&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;反应时间：根据试剂条反应时间设定&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂条名称：&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;大写字母&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;数字&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;共6位&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂卡名称：&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;大小写字母&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;数字&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;_&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、共19位&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂卡名称：&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;大小写字母&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;数字&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;空格&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、共19位&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;/********用户可更改项********/&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂卡名称、生产批号&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂条名称、是否存在&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;阈值*、反应时间&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>90</y>
+        <width>331</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>311</width>
+         <height>414</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>18</number>
+        </property>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="13" column="0">
+           <widget class="QLabel" name="Information_label17">
+            <property name="text">
+             <string>步长</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QLabel" name="Information_label19">
+            <property name="text">
+             <string>C线最小值</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="Information_label6">
+            <property name="text">
+             <string>基线-C线和边界</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="Information_label8">
+            <property name="text">
+             <string>基线-C线和T1线2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="Information_label10">
+            <property name="text">
+             <string>试剂卡条数</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="Information_label12">
+            <property name="text">
+             <string>T线的搜索范围</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLabel" name="Information_label16">
+            <property name="text">
+             <string>使能约束</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLabel" name="Information_label18">
+            <property name="text">
+             <string>幅度</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="Information_label4">
+            <property name="text">
+             <string>C线中心位置</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="Information_label5">
+            <property name="text">
+             <string>T1到C线中心位置</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="Information_label7">
+            <property name="text">
+             <string>基线-C线和T1线1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="Information_label9">
+            <property name="text">
+             <string>基线-T线和边界</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="Information_label11">
+            <property name="text">
+             <string>C线的搜索范围</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="Information_label15">
+            <property name="text">
+             <string>平均窗口</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="Information_label13">
+            <property name="text">
+             <string>C线的计算半径</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="Information_label14">
+            <property name="text">
+             <string>T线的计算半径</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="Center_LineC">
+            <property name="text">
+             <string>40</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="T1_Ccenter">
+            <property name="text">
+             <string>60</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLineEdit" name="base_CAndEdge">
+            <property name="text">
+             <string>20</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLineEdit" name="base_CAndT1_1">
+            <property name="text">
+             <string>20</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLineEdit" name="base_TAndEdge">
+            <property name="text">
+             <string>100</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLineEdit" name="ProductNum">
+            <property name="text">
+             <string>8</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLineEdit" name="SearchHalfRadius_C">
+            <property name="text">
+             <string>30</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLineEdit" name="SearchHalfRadius_T">
+            <property name="text">
+             <string>7</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLineEdit" name="AreaC_HalfRadius">
+            <property name="text">
+             <string>12</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLineEdit" name="AreaT_HalfRadius">
+            <property name="text">
+             <string>12</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLineEdit" name="WinSize">
+            <property name="text">
+             <string>10</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QLineEdit" name="LimitEnabled">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLineEdit" name="C_StepSize">
+            <property name="text">
+             <string>3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QLineEdit" name="C_Magnitude">
+            <property name="text">
+             <string>5</string>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="0">
+           <widget class="QLineEdit" name="C_Min">
+            <property name="text">
+             <string>3000</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLineEdit" name="base_CAndT1_2">
+            <property name="text">
+             <string>45</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>91</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="0" column="0">
+        <widget class="QLabel" name="Information_label1">
+         <property name="text">
+          <string>试剂卡名称</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="Information_label2">
+         <property name="text">
+          <string>生产批号</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="Information_label3">
+         <property name="text">
+          <string>反应时间</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>201</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QLineEdit" name="ProductType_Name">
+         <property name="text">
+          <string>Drug Test</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="ProductSN">
+         <property name="text">
+          <string>20190101</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="time">
+         <property name="text">
+          <string>10</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="Password_Bntton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>530</y>
+        <width>211</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -3172,352 +3225,6 @@ p, li { white-space: pre-wrap; }
        <string>Generate</string>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>10</y>
-        <width>311</width>
-        <height>492</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_S">
-       <property name="spacing">
-        <number>18</number>
-       </property>
-       <item>
-        <layout class="QGridLayout" name="gridLayout_S">
-         <item row="0" column="0">
-          <widget class="QLabel" name="Information_label1_S">
-           <property name="text">
-            <string>试剂卡名称</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="Information_label2_S">
-           <property name="text">
-            <string>生产批号</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="Information_label3_S">
-           <property name="text">
-            <string>反应时间</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="Information_label4_S">
-           <property name="text">
-            <string>C线中心位置</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="Information_label5_S">
-           <property name="text">
-            <string>T1到C线中心位置</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="Information_label6_S">
-           <property name="text">
-            <string>基线-C线和边界</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="Information_label7_S">
-           <property name="text">
-            <string>基线-C线和T1线1</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="Information_label8_S">
-           <property name="text">
-            <string>基线-C线和T1线2</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLabel" name="Information_label9_S">
-           <property name="text">
-            <string>基线-T线和边界</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="Information_label10_S">
-           <property name="text">
-            <string>试剂卡条数</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="0">
-          <widget class="QLabel" name="Information_label11_S">
-           <property name="text">
-            <string>C线的搜索范围</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="0">
-          <widget class="QLabel" name="Information_label12_S">
-           <property name="text">
-            <string>T线的搜索范围</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="0">
-          <widget class="QLabel" name="Information_label13_S">
-           <property name="text">
-            <string>C线的计算半径</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="13" column="0">
-          <widget class="QLabel" name="Information_label14_S">
-           <property name="text">
-            <string>T线的计算半径</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="0">
-          <widget class="QLabel" name="Information_label15_S">
-           <property name="text">
-            <string>平均窗口</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="0">
-          <widget class="QLabel" name="Information_label16_S">
-           <property name="text">
-            <string>使能约束</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="16" column="0">
-          <widget class="QLabel" name="Information_label17_S">
-           <property name="text">
-            <string>步长</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="17" column="0">
-          <widget class="QLabel" name="Information_label18_S">
-           <property name="text">
-            <string>幅度</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="18" column="0">
-          <widget class="QLabel" name="Information_label19_S">
-           <property name="text">
-            <string>C线最小值</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QGridLayout" name="gridLayout_4">
-         <item row="0" column="0">
-          <widget class="QLineEdit" name="ProductType_Name_S">
-           <property name="text">
-            <string>Drug_Test</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLineEdit" name="ProductSN_S">
-           <property name="text">
-            <string>20180724</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLineEdit" name="time_S">
-           <property name="text">
-            <string>1</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLineEdit" name="Center_LineC_S">
-           <property name="text">
-            <string>40</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLineEdit" name="T1_Ccenter_S">
-           <property name="text">
-            <string>62</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLineEdit" name="base_CAndEdge_S">
-           <property name="text">
-            <string>25</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLineEdit" name="base_CAndT1_1_S">
-           <property name="text">
-            <string>25</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLineEdit" name="base_CAndT1_2_S">
-           <property name="text">
-            <string>35</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLineEdit" name="ProductNum_S">
-           <property name="text">
-            <string>8</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="0">
-          <widget class="QLineEdit" name="SearchHalfRadius_C_S">
-           <property name="text">
-            <string>20</string>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="0">
-          <widget class="QLineEdit" name="SearchHalfRadius_T_S">
-           <property name="text">
-            <string>7</string>
-           </property>
-          </widget>
-         </item>
-         <item row="13" column="0">
-          <widget class="QLineEdit" name="AreaC_HalfRadius_S">
-           <property name="text">
-            <string>22</string>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="0">
-          <widget class="QLineEdit" name="AreaT_HalfRadius_S">
-           <property name="text">
-            <string>12</string>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="0">
-          <widget class="QLineEdit" name="WinSize_S">
-           <property name="text">
-            <string>10</string>
-           </property>
-          </widget>
-         </item>
-         <item row="16" column="0">
-          <widget class="QLineEdit" name="LimitEnabled_S">
-           <property name="text">
-            <string>1</string>
-           </property>
-          </widget>
-         </item>
-         <item row="17" column="0">
-          <widget class="QLineEdit" name="C_StepSize_S">
-           <property name="text">
-            <string>3</string>
-           </property>
-          </widget>
-         </item>
-         <item row="18" column="0">
-          <widget class="QLineEdit" name="C_Magnitude_S">
-           <property name="text">
-            <string>5</string>
-           </property>
-          </widget>
-         </item>
-         <item row="19" column="0">
-          <widget class="QLineEdit" name="C_Min_S">
-           <property name="text">
-            <string>3000</string>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLineEdit" name="base_TAndEdge_S">
-           <property name="text">
-            <string>84</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
      <widget class="QTabWidget" name="tabWidget_S">
       <property name="geometry">
        <rect>
@@ -3543,7 +3250,7 @@ p, li { white-space: pre-wrap; }
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tab1_S">
        <attribute name="title">
@@ -3559,7 +3266,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>12</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH1_threshold1_S">
@@ -3572,7 +3279,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>30</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="CheckBox1_S">
@@ -3598,7 +3305,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>AMP</string>
+         <string>THC</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH1_label4_S">
@@ -3675,7 +3382,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
       </widget>
@@ -3693,7 +3400,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH2_name_S">
@@ -3706,7 +3413,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>COC</string>
+         <string>OPI</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH2_label2_S">
@@ -3735,7 +3442,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>50</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH2_threshold2_S">
@@ -3748,7 +3455,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>15</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="CheckBox2_S">
@@ -3827,7 +3534,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH3_name_S">
@@ -3840,7 +3547,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>THC</string>
+         <string>COC</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH3_label2_S">
@@ -3869,7 +3576,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>50</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH3_threshold2_S">
@@ -3882,7 +3589,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>15</string>
         </property>
        </widget>
        <widget class="QCheckBox" name="CheckBox3_S">
@@ -4006,7 +3713,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>WCG</string>
+         <string>AMP</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH4_threshold3_S">
@@ -4019,7 +3726,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH4_label1_S">
@@ -4048,7 +3755,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>35</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH4_label3_S">
@@ -4077,7 +3784,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>12</string>
         </property>
        </widget>
       </widget>
@@ -4140,7 +3847,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>COP</string>
+         <string>MET</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH5_threshold3_S">
@@ -4153,7 +3860,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH5_label1_S">
@@ -4182,7 +3889,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>30</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH5_label3_S">
@@ -4211,7 +3918,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>15</string>
         </property>
        </widget>
       </widget>
@@ -4274,7 +3981,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>WEG</string>
+         <string>MDMA</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH6_threshold3_S">
@@ -4287,7 +3994,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH6_label1_S">
@@ -4316,7 +4023,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>50</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH6_label3_S">
@@ -4345,7 +4052,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>15</string>
         </property>
        </widget>
       </widget>
@@ -4408,7 +4115,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>EDG</string>
+         <string>OXY</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH7_threshold3_S">
@@ -4421,7 +4128,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH7_label1_S">
@@ -4450,7 +4157,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>50</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH7_label3_S">
@@ -4479,7 +4186,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>15</string>
         </property>
        </widget>
       </widget>
@@ -4542,7 +4249,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>UZI</string>
+         <string>BZO</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="CH8_threshold3_S">
@@ -4555,7 +4262,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>1.86</string>
+         <string>7</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH8_label1_S">
@@ -4584,7 +4291,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.76</string>
+         <string>50</string>
         </property>
        </widget>
        <widget class="QLabel" name="CH8_label3_S">
@@ -4613,7 +4320,7 @@ p, li { white-space: pre-wrap; }
          </rect>
         </property>
         <property name="text">
-         <string>6.13</string>
+         <string>15</string>
         </property>
        </widget>
       </widget>
@@ -4928,7 +4635,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;生产批号：八位数字&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;反应时间：根据试剂条反应时间设定&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂条名称：&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;大写字母&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;数字&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;共6位&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂卡名称：&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;大小写字母&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;数字&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;_&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、共19位&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂卡名称：&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;大小写字母&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;数字&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#ff0000;&quot;&gt;空格&lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;、共19位&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;/********用户可更改项********/&lt;/span&gt;&lt;/p&gt;
@@ -4936,6 +4643,389 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;试剂条名称、是否存在&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#0055ff;&quot;&gt;阈值*、反应时间&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>90</y>
+        <width>331</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>311</width>
+         <height>414</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_S">
+        <property name="spacing">
+         <number>18</number>
+        </property>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_S">
+          <item row="0" column="0">
+           <widget class="QLabel" name="Information_label4_S">
+            <property name="text">
+             <string>C线中心位置</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="Information_label5_S">
+            <property name="text">
+             <string>T1到C线中心位置</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="Information_label6_S">
+            <property name="text">
+             <string>基线-C线和边界</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="Information_label7_S">
+            <property name="text">
+             <string>基线-C线和T1线1</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="Information_label8_S">
+            <property name="text">
+             <string>基线-C线和T1线2</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="Information_label9_S">
+            <property name="text">
+             <string>基线-T线和边界</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="Information_label10_S">
+            <property name="text">
+             <string>试剂卡条数</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="Information_label11_S">
+            <property name="text">
+             <string>C线的搜索范围</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="Information_label12_S">
+            <property name="text">
+             <string>T线的搜索范围</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="Information_label13_S">
+            <property name="text">
+             <string>C线的计算半径</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="Information_label14_S">
+            <property name="text">
+             <string>T线的计算半径</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="Information_label15_S">
+            <property name="text">
+             <string>平均窗口</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLabel" name="Information_label16_S">
+            <property name="text">
+             <string>使能约束</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QLabel" name="Information_label17_S">
+            <property name="text">
+             <string>步长</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLabel" name="Information_label18_S">
+            <property name="text">
+             <string>幅度</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QLabel" name="Information_label19_S">
+            <property name="text">
+             <string>C线最小值</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="Center_LineC_S">
+            <property name="text">
+             <string>40</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="T1_Ccenter_S">
+            <property name="text">
+             <string>62</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLineEdit" name="base_CAndEdge_S">
+            <property name="text">
+             <string>20</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLineEdit" name="base_CAndT1_1_S">
+            <property name="text">
+             <string>20</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLineEdit" name="base_CAndT1_2_S">
+            <property name="text">
+             <string>40</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLineEdit" name="ProductNum_S">
+            <property name="text">
+             <string>8</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLineEdit" name="SearchHalfRadius_C_S">
+            <property name="text">
+             <string>30</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLineEdit" name="SearchHalfRadius_T_S">
+            <property name="text">
+             <string>7</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QLineEdit" name="AreaC_HalfRadius_S">
+            <property name="text">
+             <string>12</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLineEdit" name="AreaT_HalfRadius_S">
+            <property name="text">
+             <string>12</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLineEdit" name="WinSize_S">
+            <property name="text">
+             <string>10</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QLineEdit" name="LimitEnabled_S">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QLineEdit" name="C_StepSize_S">
+            <property name="text">
+             <string>3</string>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QLineEdit" name="C_Magnitude_S">
+            <property name="text">
+             <string>5</string>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="0">
+           <widget class="QLineEdit" name="C_Min_S">
+            <property name="text">
+             <string>3000</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLineEdit" name="base_TAndEdge_S">
+            <property name="text">
+             <string>92</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>201</width>
+        <height>74</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLineEdit" name="ProductType_Name_S">
+         <property name="text">
+          <string>Drug Test</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="ProductSN_S">
+         <property name="text">
+          <string>20190101</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLineEdit" name="time_S">
+         <property name="text">
+          <string>10</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>91</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="Information_label1_S">
+         <property name="text">
+          <string>试剂卡名称</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="Information_label2_S">
+         <property name="text">
+          <string>生产批号</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="Information_label3_S">
+         <property name="text">
+          <string>反应时间</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </widget>

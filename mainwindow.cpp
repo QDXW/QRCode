@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Init();
     QRPixmap = NULL;
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf8"));
+   Password_Information = new Password;
 }
 
 MainWindow::~MainWindow()
@@ -28,7 +29,7 @@ MainWindow::~MainWindow()
 void MainWindow::Init(void)
 {
     /* 限定S100&C100试剂卡名称格式 */
-    QRegExp Reagent_name("[a-zA-z0-9_-_]{19}");
+    QRegExp Reagent_name("[a-zA-z0-9_ _]{19}");
     QValidator *Reagent_Name = new QRegExpValidator(Reagent_name,this);
     ui->ProductType_Name ->setValidator(Reagent_Name);
     ui->ProductType_Name_S ->setValidator(Reagent_Name);
@@ -181,6 +182,9 @@ void MainWindow::Init(void)
 
     ui->QRlabel_S100->setText(tr("No Data"));
     ui->QRlabel_S100->setAlignment(Qt::AlignCenter);
+
+    ui->groupBox->setEnabled(false);
+    ui->groupBox_2->setEnabled(false);
 }
 /*************************************************
 Function:
@@ -1153,4 +1157,17 @@ void MainWindow::QRcode_Information_S100(void)
     }
 //    QMessageBox::information(this,"保存文件","S100二维码信息保存成功",QMessageBox::Ok);
     file.close();
+}
+
+void MainWindow::on_Password_Bntton_clicked()
+{
+    Password_Information->Clear_Password();
+    if(Password_Information->exec() == 1)
+    {
+        ui->groupBox->setEnabled(true);
+    }
+    else
+    {
+        ui->groupBox->setEnabled(false);
+    }
 }

@@ -11,6 +11,8 @@ INPUT(
 ./release\rscode.o
 ./release\split.o
 ./release\CRC16.o
+./release\password.o
 ./release\qrc_image.o
 ./release\moc_mainwindow.o
+./release\moc_password.o
 );

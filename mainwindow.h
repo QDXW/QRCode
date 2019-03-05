@@ -11,6 +11,9 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QDebug>
+#include <password.h>
+
+
 #define QRCODE_TEST_NAME_MAX 8
 
 /******************************************************************************/
@@ -86,7 +89,10 @@ private slots:
 
     void on_Create_Image_pushButton_S_clicked();
 
+    void on_Password_Bntton_clicked();
+
 private:
+    Password *Password_Information;
     Ui::MainWindow *ui;
     QPixmap *QRPixmap;
     QRcode *QR;

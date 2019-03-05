@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -219,22 +220,21 @@ public:
     QLabel *QRlabel_C100;
     QPushButton *Generate_pushButton;
     QPushButton *pushButton_2;
+    QTextBrowser *textBrowser_4;
+    QGroupBox *groupBox;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QGridLayout *gridLayout_2;
     QLabel *Information_label17;
     QLabel *Information_label19;
-    QLabel *Information_label2;
     QLabel *Information_label6;
     QLabel *Information_label8;
     QLabel *Information_label10;
     QLabel *Information_label12;
     QLabel *Information_label16;
     QLabel *Information_label18;
-    QLabel *Information_label3;
     QLabel *Information_label4;
     QLabel *Information_label5;
-    QLabel *Information_label1;
     QLabel *Information_label7;
     QLabel *Information_label9;
     QLabel *Information_label11;
@@ -242,14 +242,10 @@ public:
     QLabel *Information_label13;
     QLabel *Information_label14;
     QGridLayout *gridLayout;
-    QLineEdit *ProductType_Name;
-    QLineEdit *ProductSN;
-    QLineEdit *time;
     QLineEdit *Center_LineC;
     QLineEdit *T1_Ccenter;
     QLineEdit *base_CAndEdge;
     QLineEdit *base_CAndT1_1;
-    QLineEdit *base_CAndT1_2;
     QLineEdit *base_TAndEdge;
     QLineEdit *ProductNum;
     QLineEdit *SearchHalfRadius_C;
@@ -261,53 +257,22 @@ public:
     QLineEdit *C_StepSize;
     QLineEdit *C_Magnitude;
     QLineEdit *C_Min;
-    QTextBrowser *textBrowser_4;
+    QLineEdit *base_CAndT1_2;
+    QWidget *layoutWidget1;
+    QGridLayout *gridLayout_7;
+    QLabel *Information_label1;
+    QLabel *Information_label2;
+    QLabel *Information_label3;
+    QWidget *layoutWidget2;
+    QGridLayout *gridLayout_6;
+    QLineEdit *ProductType_Name;
+    QLineEdit *ProductSN;
+    QLineEdit *time;
+    QPushButton *Password_Bntton;
     QWidget *page_2;
     QPushButton *pushButton;
     QLabel *QRlabel_S100;
     QPushButton *Generate_pushButton_S;
-    QWidget *layoutWidget_2;
-    QHBoxLayout *horizontalLayout_S;
-    QGridLayout *gridLayout_S;
-    QLabel *Information_label1_S;
-    QLabel *Information_label2_S;
-    QLabel *Information_label3_S;
-    QLabel *Information_label4_S;
-    QLabel *Information_label5_S;
-    QLabel *Information_label6_S;
-    QLabel *Information_label7_S;
-    QLabel *Information_label8_S;
-    QLabel *Information_label9_S;
-    QLabel *Information_label10_S;
-    QLabel *Information_label11_S;
-    QLabel *Information_label12_S;
-    QLabel *Information_label13_S;
-    QLabel *Information_label14_S;
-    QLabel *Information_label15_S;
-    QLabel *Information_label16_S;
-    QLabel *Information_label17_S;
-    QLabel *Information_label18_S;
-    QLabel *Information_label19_S;
-    QGridLayout *gridLayout_4;
-    QLineEdit *ProductType_Name_S;
-    QLineEdit *ProductSN_S;
-    QLineEdit *time_S;
-    QLineEdit *Center_LineC_S;
-    QLineEdit *T1_Ccenter_S;
-    QLineEdit *base_CAndEdge_S;
-    QLineEdit *base_CAndT1_1_S;
-    QLineEdit *base_CAndT1_2_S;
-    QLineEdit *ProductNum_S;
-    QLineEdit *SearchHalfRadius_C_S;
-    QLineEdit *SearchHalfRadius_T_S;
-    QLineEdit *AreaC_HalfRadius_S;
-    QLineEdit *AreaT_HalfRadius_S;
-    QLineEdit *WinSize_S;
-    QLineEdit *LimitEnabled_S;
-    QLineEdit *C_StepSize_S;
-    QLineEdit *C_Magnitude_S;
-    QLineEdit *C_Min_S;
-    QLineEdit *base_TAndEdge_S;
     QTabWidget *tabWidget_S;
     QWidget *tab1_S;
     QLineEdit *CH1_threshold2_S;
@@ -411,6 +376,53 @@ public:
     QLabel *CH10_label1_S;
     QPushButton *Create_Image_pushButton_S;
     QTextBrowser *textBrowser_3;
+    QGroupBox *groupBox_2;
+    QWidget *layoutWidget_2;
+    QHBoxLayout *horizontalLayout_S;
+    QGridLayout *gridLayout_S;
+    QLabel *Information_label4_S;
+    QLabel *Information_label5_S;
+    QLabel *Information_label6_S;
+    QLabel *Information_label7_S;
+    QLabel *Information_label8_S;
+    QLabel *Information_label9_S;
+    QLabel *Information_label10_S;
+    QLabel *Information_label11_S;
+    QLabel *Information_label12_S;
+    QLabel *Information_label13_S;
+    QLabel *Information_label14_S;
+    QLabel *Information_label15_S;
+    QLabel *Information_label16_S;
+    QLabel *Information_label17_S;
+    QLabel *Information_label18_S;
+    QLabel *Information_label19_S;
+    QGridLayout *gridLayout_4;
+    QLineEdit *Center_LineC_S;
+    QLineEdit *T1_Ccenter_S;
+    QLineEdit *base_CAndEdge_S;
+    QLineEdit *base_CAndT1_1_S;
+    QLineEdit *base_CAndT1_2_S;
+    QLineEdit *ProductNum_S;
+    QLineEdit *SearchHalfRadius_C_S;
+    QLineEdit *SearchHalfRadius_T_S;
+    QLineEdit *AreaC_HalfRadius_S;
+    QLineEdit *AreaT_HalfRadius_S;
+    QLineEdit *WinSize_S;
+    QLineEdit *LimitEnabled_S;
+    QLineEdit *C_StepSize_S;
+    QLineEdit *C_Magnitude_S;
+    QLineEdit *C_Min_S;
+    QLineEdit *base_TAndEdge_S;
+    QWidget *layoutWidget3;
+    QGridLayout *gridLayout_3;
+    QLineEdit *ProductType_Name_S;
+    QLineEdit *ProductSN_S;
+    QLineEdit *time_S;
+    QWidget *layoutWidget4;
+    QGridLayout *gridLayout_5;
+    QLabel *Information_label1_S;
+    QLabel *Information_label2_S;
+    QLabel *Information_label3_S;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -1078,9 +1090,15 @@ public:
         pushButton_2 = new QPushButton(page);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setGeometry(QRect(800, 730, 101, 51));
-        layoutWidget = new QWidget(page);
+        textBrowser_4 = new QTextBrowser(page);
+        textBrowser_4->setObjectName(QStringLiteral("textBrowser_4"));
+        textBrowser_4->setGeometry(QRect(0, 530, 221, 281));
+        groupBox = new QGroupBox(page);
+        groupBox->setObjectName(QStringLiteral("groupBox"));
+        groupBox->setGeometry(QRect(0, 90, 331, 431));
+        layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(0, 10, 311, 492));
+        layoutWidget->setGeometry(QRect(10, 10, 311, 414));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setSpacing(18);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
@@ -1093,115 +1111,97 @@ public:
         Information_label17->setObjectName(QStringLiteral("Information_label17"));
         Information_label17->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label17, 16, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label17, 13, 0, 1, 1);
 
         Information_label19 = new QLabel(layoutWidget);
         Information_label19->setObjectName(QStringLiteral("Information_label19"));
         Information_label19->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label19, 18, 0, 1, 1);
-
-        Information_label2 = new QLabel(layoutWidget);
-        Information_label2->setObjectName(QStringLiteral("Information_label2"));
-        Information_label2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_2->addWidget(Information_label2, 1, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label19, 15, 0, 1, 1);
 
         Information_label6 = new QLabel(layoutWidget);
         Information_label6->setObjectName(QStringLiteral("Information_label6"));
         Information_label6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label6, 5, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label6, 2, 0, 1, 1);
 
         Information_label8 = new QLabel(layoutWidget);
         Information_label8->setObjectName(QStringLiteral("Information_label8"));
         Information_label8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label8, 7, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label8, 4, 0, 1, 1);
 
         Information_label10 = new QLabel(layoutWidget);
         Information_label10->setObjectName(QStringLiteral("Information_label10"));
         Information_label10->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label10, 9, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label10, 6, 0, 1, 1);
 
         Information_label12 = new QLabel(layoutWidget);
         Information_label12->setObjectName(QStringLiteral("Information_label12"));
         Information_label12->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label12, 11, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label12, 8, 0, 1, 1);
 
         Information_label16 = new QLabel(layoutWidget);
         Information_label16->setObjectName(QStringLiteral("Information_label16"));
         Information_label16->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label16, 15, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label16, 12, 0, 1, 1);
 
         Information_label18 = new QLabel(layoutWidget);
         Information_label18->setObjectName(QStringLiteral("Information_label18"));
         Information_label18->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label18, 17, 0, 1, 1);
-
-        Information_label3 = new QLabel(layoutWidget);
-        Information_label3->setObjectName(QStringLiteral("Information_label3"));
-        Information_label3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_2->addWidget(Information_label3, 2, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label18, 14, 0, 1, 1);
 
         Information_label4 = new QLabel(layoutWidget);
         Information_label4->setObjectName(QStringLiteral("Information_label4"));
         Information_label4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label4, 3, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label4, 0, 0, 1, 1);
 
         Information_label5 = new QLabel(layoutWidget);
         Information_label5->setObjectName(QStringLiteral("Information_label5"));
         Information_label5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label5, 4, 0, 1, 1);
-
-        Information_label1 = new QLabel(layoutWidget);
-        Information_label1->setObjectName(QStringLiteral("Information_label1"));
-        Information_label1->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_2->addWidget(Information_label1, 0, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label5, 1, 0, 1, 1);
 
         Information_label7 = new QLabel(layoutWidget);
         Information_label7->setObjectName(QStringLiteral("Information_label7"));
         Information_label7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label7, 6, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label7, 3, 0, 1, 1);
 
         Information_label9 = new QLabel(layoutWidget);
         Information_label9->setObjectName(QStringLiteral("Information_label9"));
         Information_label9->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label9, 8, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label9, 5, 0, 1, 1);
 
         Information_label11 = new QLabel(layoutWidget);
         Information_label11->setObjectName(QStringLiteral("Information_label11"));
         Information_label11->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label11, 10, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label11, 7, 0, 1, 1);
 
         Information_label15 = new QLabel(layoutWidget);
         Information_label15->setObjectName(QStringLiteral("Information_label15"));
         Information_label15->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label15, 14, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label15, 11, 0, 1, 1);
 
         Information_label13 = new QLabel(layoutWidget);
         Information_label13->setObjectName(QStringLiteral("Information_label13"));
         Information_label13->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label13, 12, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label13, 9, 0, 1, 1);
 
         Information_label14 = new QLabel(layoutWidget);
         Information_label14->setObjectName(QStringLiteral("Information_label14"));
         Information_label14->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_2->addWidget(Information_label14, 13, 0, 1, 1);
+        gridLayout_2->addWidget(Information_label14, 10, 0, 1, 1);
 
 
         horizontalLayout->addLayout(gridLayout_2);
@@ -1209,107 +1209,142 @@ public:
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        ProductType_Name = new QLineEdit(layoutWidget);
-        ProductType_Name->setObjectName(QStringLiteral("ProductType_Name"));
-
-        gridLayout->addWidget(ProductType_Name, 0, 0, 1, 1);
-
-        ProductSN = new QLineEdit(layoutWidget);
-        ProductSN->setObjectName(QStringLiteral("ProductSN"));
-
-        gridLayout->addWidget(ProductSN, 1, 0, 1, 1);
-
-        time = new QLineEdit(layoutWidget);
-        time->setObjectName(QStringLiteral("time"));
-
-        gridLayout->addWidget(time, 2, 0, 1, 1);
-
         Center_LineC = new QLineEdit(layoutWidget);
         Center_LineC->setObjectName(QStringLiteral("Center_LineC"));
 
-        gridLayout->addWidget(Center_LineC, 3, 0, 1, 1);
+        gridLayout->addWidget(Center_LineC, 0, 0, 1, 1);
 
         T1_Ccenter = new QLineEdit(layoutWidget);
         T1_Ccenter->setObjectName(QStringLiteral("T1_Ccenter"));
 
-        gridLayout->addWidget(T1_Ccenter, 4, 0, 1, 1);
+        gridLayout->addWidget(T1_Ccenter, 1, 0, 1, 1);
 
         base_CAndEdge = new QLineEdit(layoutWidget);
         base_CAndEdge->setObjectName(QStringLiteral("base_CAndEdge"));
 
-        gridLayout->addWidget(base_CAndEdge, 5, 0, 1, 1);
+        gridLayout->addWidget(base_CAndEdge, 2, 0, 1, 1);
 
         base_CAndT1_1 = new QLineEdit(layoutWidget);
         base_CAndT1_1->setObjectName(QStringLiteral("base_CAndT1_1"));
 
-        gridLayout->addWidget(base_CAndT1_1, 6, 0, 1, 1);
-
-        base_CAndT1_2 = new QLineEdit(layoutWidget);
-        base_CAndT1_2->setObjectName(QStringLiteral("base_CAndT1_2"));
-
-        gridLayout->addWidget(base_CAndT1_2, 7, 0, 1, 1);
+        gridLayout->addWidget(base_CAndT1_1, 3, 0, 1, 1);
 
         base_TAndEdge = new QLineEdit(layoutWidget);
         base_TAndEdge->setObjectName(QStringLiteral("base_TAndEdge"));
 
-        gridLayout->addWidget(base_TAndEdge, 8, 0, 1, 1);
+        gridLayout->addWidget(base_TAndEdge, 5, 0, 1, 1);
 
         ProductNum = new QLineEdit(layoutWidget);
         ProductNum->setObjectName(QStringLiteral("ProductNum"));
 
-        gridLayout->addWidget(ProductNum, 9, 0, 1, 1);
+        gridLayout->addWidget(ProductNum, 6, 0, 1, 1);
 
         SearchHalfRadius_C = new QLineEdit(layoutWidget);
         SearchHalfRadius_C->setObjectName(QStringLiteral("SearchHalfRadius_C"));
 
-        gridLayout->addWidget(SearchHalfRadius_C, 11, 0, 1, 1);
+        gridLayout->addWidget(SearchHalfRadius_C, 8, 0, 1, 1);
 
         SearchHalfRadius_T = new QLineEdit(layoutWidget);
         SearchHalfRadius_T->setObjectName(QStringLiteral("SearchHalfRadius_T"));
 
-        gridLayout->addWidget(SearchHalfRadius_T, 12, 0, 1, 1);
+        gridLayout->addWidget(SearchHalfRadius_T, 9, 0, 1, 1);
 
         AreaC_HalfRadius = new QLineEdit(layoutWidget);
         AreaC_HalfRadius->setObjectName(QStringLiteral("AreaC_HalfRadius"));
 
-        gridLayout->addWidget(AreaC_HalfRadius, 13, 0, 1, 1);
+        gridLayout->addWidget(AreaC_HalfRadius, 10, 0, 1, 1);
 
         AreaT_HalfRadius = new QLineEdit(layoutWidget);
         AreaT_HalfRadius->setObjectName(QStringLiteral("AreaT_HalfRadius"));
 
-        gridLayout->addWidget(AreaT_HalfRadius, 14, 0, 1, 1);
+        gridLayout->addWidget(AreaT_HalfRadius, 11, 0, 1, 1);
 
         WinSize = new QLineEdit(layoutWidget);
         WinSize->setObjectName(QStringLiteral("WinSize"));
 
-        gridLayout->addWidget(WinSize, 15, 0, 1, 1);
+        gridLayout->addWidget(WinSize, 12, 0, 1, 1);
 
         LimitEnabled = new QLineEdit(layoutWidget);
         LimitEnabled->setObjectName(QStringLiteral("LimitEnabled"));
 
-        gridLayout->addWidget(LimitEnabled, 16, 0, 1, 1);
+        gridLayout->addWidget(LimitEnabled, 13, 0, 1, 1);
 
         C_StepSize = new QLineEdit(layoutWidget);
         C_StepSize->setObjectName(QStringLiteral("C_StepSize"));
 
-        gridLayout->addWidget(C_StepSize, 17, 0, 1, 1);
+        gridLayout->addWidget(C_StepSize, 14, 0, 1, 1);
 
         C_Magnitude = new QLineEdit(layoutWidget);
         C_Magnitude->setObjectName(QStringLiteral("C_Magnitude"));
 
-        gridLayout->addWidget(C_Magnitude, 18, 0, 1, 1);
+        gridLayout->addWidget(C_Magnitude, 15, 0, 1, 1);
 
         C_Min = new QLineEdit(layoutWidget);
         C_Min->setObjectName(QStringLiteral("C_Min"));
 
-        gridLayout->addWidget(C_Min, 19, 0, 1, 1);
+        gridLayout->addWidget(C_Min, 16, 0, 1, 1);
+
+        base_CAndT1_2 = new QLineEdit(layoutWidget);
+        base_CAndT1_2->setObjectName(QStringLiteral("base_CAndT1_2"));
+
+        gridLayout->addWidget(base_CAndT1_2, 4, 0, 1, 1);
 
 
         horizontalLayout->addLayout(gridLayout);
 
-        textBrowser_4 = new QTextBrowser(page);
-        textBrowser_4->setObjectName(QStringLiteral("textBrowser_4"));
-        textBrowser_4->setGeometry(QRect(0, 530, 221, 281));
+        layoutWidget1 = new QWidget(page);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(10, 10, 91, 71));
+        gridLayout_7 = new QGridLayout(layoutWidget1);
+        gridLayout_7->setSpacing(6);
+        gridLayout_7->setContentsMargins(11, 11, 11, 11);
+        gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
+        gridLayout_7->setContentsMargins(0, 0, 0, 0);
+        Information_label1 = new QLabel(layoutWidget1);
+        Information_label1->setObjectName(QStringLiteral("Information_label1"));
+        Information_label1->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_7->addWidget(Information_label1, 0, 0, 1, 1);
+
+        Information_label2 = new QLabel(layoutWidget1);
+        Information_label2->setObjectName(QStringLiteral("Information_label2"));
+        Information_label2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_7->addWidget(Information_label2, 1, 0, 1, 1);
+
+        Information_label3 = new QLabel(layoutWidget1);
+        Information_label3->setObjectName(QStringLiteral("Information_label3"));
+        Information_label3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_7->addWidget(Information_label3, 2, 0, 1, 1);
+
+        layoutWidget2 = new QWidget(page);
+        layoutWidget2->setObjectName(QStringLiteral("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(120, 10, 201, 74));
+        gridLayout_6 = new QGridLayout(layoutWidget2);
+        gridLayout_6->setSpacing(6);
+        gridLayout_6->setContentsMargins(11, 11, 11, 11);
+        gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
+        gridLayout_6->setContentsMargins(0, 0, 0, 0);
+        ProductType_Name = new QLineEdit(layoutWidget2);
+        ProductType_Name->setObjectName(QStringLiteral("ProductType_Name"));
+
+        gridLayout_6->addWidget(ProductType_Name, 0, 0, 1, 1);
+
+        ProductSN = new QLineEdit(layoutWidget2);
+        ProductSN->setObjectName(QStringLiteral("ProductSN"));
+
+        gridLayout_6->addWidget(ProductSN, 1, 0, 1, 1);
+
+        time = new QLineEdit(layoutWidget2);
+        time->setObjectName(QStringLiteral("time"));
+
+        gridLayout_6->addWidget(time, 2, 0, 1, 1);
+
+        Password_Bntton = new QPushButton(page);
+        Password_Bntton->setObjectName(QStringLiteral("Password_Bntton"));
+        Password_Bntton->setGeometry(QRect(0, 530, 211, 16));
+        Password_Bntton->setFlat(true);
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName(QStringLiteral("page_2"));
@@ -1338,235 +1373,6 @@ public:
         Generate_pushButton_S->setObjectName(QStringLiteral("Generate_pushButton_S"));
         Generate_pushButton_S->setGeometry(QRect(240, 730, 101, 51));
         Generate_pushButton_S->setMinimumSize(QSize(101, 51));
-        layoutWidget_2 = new QWidget(page_2);
-        layoutWidget_2->setObjectName(QStringLiteral("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(0, 10, 311, 492));
-        horizontalLayout_S = new QHBoxLayout(layoutWidget_2);
-        horizontalLayout_S->setSpacing(18);
-        horizontalLayout_S->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_S->setObjectName(QStringLiteral("horizontalLayout_S"));
-        horizontalLayout_S->setContentsMargins(0, 0, 0, 0);
-        gridLayout_S = new QGridLayout();
-        gridLayout_S->setSpacing(6);
-        gridLayout_S->setObjectName(QStringLiteral("gridLayout_S"));
-        Information_label1_S = new QLabel(layoutWidget_2);
-        Information_label1_S->setObjectName(QStringLiteral("Information_label1_S"));
-        Information_label1_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label1_S, 0, 0, 1, 1);
-
-        Information_label2_S = new QLabel(layoutWidget_2);
-        Information_label2_S->setObjectName(QStringLiteral("Information_label2_S"));
-        Information_label2_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label2_S, 1, 0, 1, 1);
-
-        Information_label3_S = new QLabel(layoutWidget_2);
-        Information_label3_S->setObjectName(QStringLiteral("Information_label3_S"));
-        Information_label3_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label3_S, 2, 0, 1, 1);
-
-        Information_label4_S = new QLabel(layoutWidget_2);
-        Information_label4_S->setObjectName(QStringLiteral("Information_label4_S"));
-        Information_label4_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label4_S, 3, 0, 1, 1);
-
-        Information_label5_S = new QLabel(layoutWidget_2);
-        Information_label5_S->setObjectName(QStringLiteral("Information_label5_S"));
-        Information_label5_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label5_S, 4, 0, 1, 1);
-
-        Information_label6_S = new QLabel(layoutWidget_2);
-        Information_label6_S->setObjectName(QStringLiteral("Information_label6_S"));
-        Information_label6_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label6_S, 5, 0, 1, 1);
-
-        Information_label7_S = new QLabel(layoutWidget_2);
-        Information_label7_S->setObjectName(QStringLiteral("Information_label7_S"));
-        Information_label7_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label7_S, 6, 0, 1, 1);
-
-        Information_label8_S = new QLabel(layoutWidget_2);
-        Information_label8_S->setObjectName(QStringLiteral("Information_label8_S"));
-        Information_label8_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label8_S, 7, 0, 1, 1);
-
-        Information_label9_S = new QLabel(layoutWidget_2);
-        Information_label9_S->setObjectName(QStringLiteral("Information_label9_S"));
-        Information_label9_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label9_S, 8, 0, 1, 1);
-
-        Information_label10_S = new QLabel(layoutWidget_2);
-        Information_label10_S->setObjectName(QStringLiteral("Information_label10_S"));
-        Information_label10_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label10_S, 9, 0, 1, 1);
-
-        Information_label11_S = new QLabel(layoutWidget_2);
-        Information_label11_S->setObjectName(QStringLiteral("Information_label11_S"));
-        Information_label11_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label11_S, 10, 0, 1, 1);
-
-        Information_label12_S = new QLabel(layoutWidget_2);
-        Information_label12_S->setObjectName(QStringLiteral("Information_label12_S"));
-        Information_label12_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label12_S, 11, 0, 1, 1);
-
-        Information_label13_S = new QLabel(layoutWidget_2);
-        Information_label13_S->setObjectName(QStringLiteral("Information_label13_S"));
-        Information_label13_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label13_S, 12, 0, 1, 1);
-
-        Information_label14_S = new QLabel(layoutWidget_2);
-        Information_label14_S->setObjectName(QStringLiteral("Information_label14_S"));
-        Information_label14_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label14_S, 13, 0, 1, 1);
-
-        Information_label15_S = new QLabel(layoutWidget_2);
-        Information_label15_S->setObjectName(QStringLiteral("Information_label15_S"));
-        Information_label15_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label15_S, 14, 0, 1, 1);
-
-        Information_label16_S = new QLabel(layoutWidget_2);
-        Information_label16_S->setObjectName(QStringLiteral("Information_label16_S"));
-        Information_label16_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label16_S, 15, 0, 1, 1);
-
-        Information_label17_S = new QLabel(layoutWidget_2);
-        Information_label17_S->setObjectName(QStringLiteral("Information_label17_S"));
-        Information_label17_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label17_S, 16, 0, 1, 1);
-
-        Information_label18_S = new QLabel(layoutWidget_2);
-        Information_label18_S->setObjectName(QStringLiteral("Information_label18_S"));
-        Information_label18_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label18_S, 17, 0, 1, 1);
-
-        Information_label19_S = new QLabel(layoutWidget_2);
-        Information_label19_S->setObjectName(QStringLiteral("Information_label19_S"));
-        Information_label19_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_S->addWidget(Information_label19_S, 18, 0, 1, 1);
-
-
-        horizontalLayout_S->addLayout(gridLayout_S);
-
-        gridLayout_4 = new QGridLayout();
-        gridLayout_4->setSpacing(6);
-        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
-        ProductType_Name_S = new QLineEdit(layoutWidget_2);
-        ProductType_Name_S->setObjectName(QStringLiteral("ProductType_Name_S"));
-
-        gridLayout_4->addWidget(ProductType_Name_S, 0, 0, 1, 1);
-
-        ProductSN_S = new QLineEdit(layoutWidget_2);
-        ProductSN_S->setObjectName(QStringLiteral("ProductSN_S"));
-
-        gridLayout_4->addWidget(ProductSN_S, 1, 0, 1, 1);
-
-        time_S = new QLineEdit(layoutWidget_2);
-        time_S->setObjectName(QStringLiteral("time_S"));
-
-        gridLayout_4->addWidget(time_S, 2, 0, 1, 1);
-
-        Center_LineC_S = new QLineEdit(layoutWidget_2);
-        Center_LineC_S->setObjectName(QStringLiteral("Center_LineC_S"));
-
-        gridLayout_4->addWidget(Center_LineC_S, 3, 0, 1, 1);
-
-        T1_Ccenter_S = new QLineEdit(layoutWidget_2);
-        T1_Ccenter_S->setObjectName(QStringLiteral("T1_Ccenter_S"));
-
-        gridLayout_4->addWidget(T1_Ccenter_S, 4, 0, 1, 1);
-
-        base_CAndEdge_S = new QLineEdit(layoutWidget_2);
-        base_CAndEdge_S->setObjectName(QStringLiteral("base_CAndEdge_S"));
-
-        gridLayout_4->addWidget(base_CAndEdge_S, 5, 0, 1, 1);
-
-        base_CAndT1_1_S = new QLineEdit(layoutWidget_2);
-        base_CAndT1_1_S->setObjectName(QStringLiteral("base_CAndT1_1_S"));
-
-        gridLayout_4->addWidget(base_CAndT1_1_S, 6, 0, 1, 1);
-
-        base_CAndT1_2_S = new QLineEdit(layoutWidget_2);
-        base_CAndT1_2_S->setObjectName(QStringLiteral("base_CAndT1_2_S"));
-
-        gridLayout_4->addWidget(base_CAndT1_2_S, 7, 0, 1, 1);
-
-        ProductNum_S = new QLineEdit(layoutWidget_2);
-        ProductNum_S->setObjectName(QStringLiteral("ProductNum_S"));
-
-        gridLayout_4->addWidget(ProductNum_S, 9, 0, 1, 1);
-
-        SearchHalfRadius_C_S = new QLineEdit(layoutWidget_2);
-        SearchHalfRadius_C_S->setObjectName(QStringLiteral("SearchHalfRadius_C_S"));
-
-        gridLayout_4->addWidget(SearchHalfRadius_C_S, 11, 0, 1, 1);
-
-        SearchHalfRadius_T_S = new QLineEdit(layoutWidget_2);
-        SearchHalfRadius_T_S->setObjectName(QStringLiteral("SearchHalfRadius_T_S"));
-
-        gridLayout_4->addWidget(SearchHalfRadius_T_S, 12, 0, 1, 1);
-
-        AreaC_HalfRadius_S = new QLineEdit(layoutWidget_2);
-        AreaC_HalfRadius_S->setObjectName(QStringLiteral("AreaC_HalfRadius_S"));
-
-        gridLayout_4->addWidget(AreaC_HalfRadius_S, 13, 0, 1, 1);
-
-        AreaT_HalfRadius_S = new QLineEdit(layoutWidget_2);
-        AreaT_HalfRadius_S->setObjectName(QStringLiteral("AreaT_HalfRadius_S"));
-
-        gridLayout_4->addWidget(AreaT_HalfRadius_S, 14, 0, 1, 1);
-
-        WinSize_S = new QLineEdit(layoutWidget_2);
-        WinSize_S->setObjectName(QStringLiteral("WinSize_S"));
-
-        gridLayout_4->addWidget(WinSize_S, 15, 0, 1, 1);
-
-        LimitEnabled_S = new QLineEdit(layoutWidget_2);
-        LimitEnabled_S->setObjectName(QStringLiteral("LimitEnabled_S"));
-
-        gridLayout_4->addWidget(LimitEnabled_S, 16, 0, 1, 1);
-
-        C_StepSize_S = new QLineEdit(layoutWidget_2);
-        C_StepSize_S->setObjectName(QStringLiteral("C_StepSize_S"));
-
-        gridLayout_4->addWidget(C_StepSize_S, 17, 0, 1, 1);
-
-        C_Magnitude_S = new QLineEdit(layoutWidget_2);
-        C_Magnitude_S->setObjectName(QStringLiteral("C_Magnitude_S"));
-
-        gridLayout_4->addWidget(C_Magnitude_S, 18, 0, 1, 1);
-
-        C_Min_S = new QLineEdit(layoutWidget_2);
-        C_Min_S->setObjectName(QStringLiteral("C_Min_S"));
-
-        gridLayout_4->addWidget(C_Min_S, 19, 0, 1, 1);
-
-        base_TAndEdge_S = new QLineEdit(layoutWidget_2);
-        base_TAndEdge_S->setObjectName(QStringLiteral("base_TAndEdge_S"));
-
-        gridLayout_4->addWidget(base_TAndEdge_S, 8, 0, 1, 1);
-
-
-        horizontalLayout_S->addLayout(gridLayout_4);
-
         tabWidget_S = new QTabWidget(page_2);
         tabWidget_S->setObjectName(QStringLiteral("tabWidget_S"));
         tabWidget_S->setGeometry(QRect(240, 530, 671, 181));
@@ -1922,14 +1728,262 @@ public:
         textBrowser_3 = new QTextBrowser(page_2);
         textBrowser_3->setObjectName(QStringLiteral("textBrowser_3"));
         textBrowser_3->setGeometry(QRect(0, 530, 221, 281));
+        groupBox_2 = new QGroupBox(page_2);
+        groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
+        groupBox_2->setGeometry(QRect(0, 90, 331, 431));
+        layoutWidget_2 = new QWidget(groupBox_2);
+        layoutWidget_2->setObjectName(QStringLiteral("layoutWidget_2"));
+        layoutWidget_2->setGeometry(QRect(10, 10, 311, 414));
+        horizontalLayout_S = new QHBoxLayout(layoutWidget_2);
+        horizontalLayout_S->setSpacing(18);
+        horizontalLayout_S->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_S->setObjectName(QStringLiteral("horizontalLayout_S"));
+        horizontalLayout_S->setContentsMargins(0, 0, 0, 0);
+        gridLayout_S = new QGridLayout();
+        gridLayout_S->setSpacing(6);
+        gridLayout_S->setObjectName(QStringLiteral("gridLayout_S"));
+        Information_label4_S = new QLabel(layoutWidget_2);
+        Information_label4_S->setObjectName(QStringLiteral("Information_label4_S"));
+        Information_label4_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label4_S, 0, 0, 1, 1);
+
+        Information_label5_S = new QLabel(layoutWidget_2);
+        Information_label5_S->setObjectName(QStringLiteral("Information_label5_S"));
+        Information_label5_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label5_S, 1, 0, 1, 1);
+
+        Information_label6_S = new QLabel(layoutWidget_2);
+        Information_label6_S->setObjectName(QStringLiteral("Information_label6_S"));
+        Information_label6_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label6_S, 2, 0, 1, 1);
+
+        Information_label7_S = new QLabel(layoutWidget_2);
+        Information_label7_S->setObjectName(QStringLiteral("Information_label7_S"));
+        Information_label7_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label7_S, 3, 0, 1, 1);
+
+        Information_label8_S = new QLabel(layoutWidget_2);
+        Information_label8_S->setObjectName(QStringLiteral("Information_label8_S"));
+        Information_label8_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label8_S, 4, 0, 1, 1);
+
+        Information_label9_S = new QLabel(layoutWidget_2);
+        Information_label9_S->setObjectName(QStringLiteral("Information_label9_S"));
+        Information_label9_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label9_S, 5, 0, 1, 1);
+
+        Information_label10_S = new QLabel(layoutWidget_2);
+        Information_label10_S->setObjectName(QStringLiteral("Information_label10_S"));
+        Information_label10_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label10_S, 6, 0, 1, 1);
+
+        Information_label11_S = new QLabel(layoutWidget_2);
+        Information_label11_S->setObjectName(QStringLiteral("Information_label11_S"));
+        Information_label11_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label11_S, 7, 0, 1, 1);
+
+        Information_label12_S = new QLabel(layoutWidget_2);
+        Information_label12_S->setObjectName(QStringLiteral("Information_label12_S"));
+        Information_label12_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label12_S, 8, 0, 1, 1);
+
+        Information_label13_S = new QLabel(layoutWidget_2);
+        Information_label13_S->setObjectName(QStringLiteral("Information_label13_S"));
+        Information_label13_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label13_S, 9, 0, 1, 1);
+
+        Information_label14_S = new QLabel(layoutWidget_2);
+        Information_label14_S->setObjectName(QStringLiteral("Information_label14_S"));
+        Information_label14_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label14_S, 10, 0, 1, 1);
+
+        Information_label15_S = new QLabel(layoutWidget_2);
+        Information_label15_S->setObjectName(QStringLiteral("Information_label15_S"));
+        Information_label15_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label15_S, 11, 0, 1, 1);
+
+        Information_label16_S = new QLabel(layoutWidget_2);
+        Information_label16_S->setObjectName(QStringLiteral("Information_label16_S"));
+        Information_label16_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label16_S, 12, 0, 1, 1);
+
+        Information_label17_S = new QLabel(layoutWidget_2);
+        Information_label17_S->setObjectName(QStringLiteral("Information_label17_S"));
+        Information_label17_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label17_S, 13, 0, 1, 1);
+
+        Information_label18_S = new QLabel(layoutWidget_2);
+        Information_label18_S->setObjectName(QStringLiteral("Information_label18_S"));
+        Information_label18_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label18_S, 14, 0, 1, 1);
+
+        Information_label19_S = new QLabel(layoutWidget_2);
+        Information_label19_S->setObjectName(QStringLiteral("Information_label19_S"));
+        Information_label19_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_S->addWidget(Information_label19_S, 15, 0, 1, 1);
+
+
+        horizontalLayout_S->addLayout(gridLayout_S);
+
+        gridLayout_4 = new QGridLayout();
+        gridLayout_4->setSpacing(6);
+        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
+        Center_LineC_S = new QLineEdit(layoutWidget_2);
+        Center_LineC_S->setObjectName(QStringLiteral("Center_LineC_S"));
+
+        gridLayout_4->addWidget(Center_LineC_S, 0, 0, 1, 1);
+
+        T1_Ccenter_S = new QLineEdit(layoutWidget_2);
+        T1_Ccenter_S->setObjectName(QStringLiteral("T1_Ccenter_S"));
+
+        gridLayout_4->addWidget(T1_Ccenter_S, 1, 0, 1, 1);
+
+        base_CAndEdge_S = new QLineEdit(layoutWidget_2);
+        base_CAndEdge_S->setObjectName(QStringLiteral("base_CAndEdge_S"));
+
+        gridLayout_4->addWidget(base_CAndEdge_S, 2, 0, 1, 1);
+
+        base_CAndT1_1_S = new QLineEdit(layoutWidget_2);
+        base_CAndT1_1_S->setObjectName(QStringLiteral("base_CAndT1_1_S"));
+
+        gridLayout_4->addWidget(base_CAndT1_1_S, 3, 0, 1, 1);
+
+        base_CAndT1_2_S = new QLineEdit(layoutWidget_2);
+        base_CAndT1_2_S->setObjectName(QStringLiteral("base_CAndT1_2_S"));
+
+        gridLayout_4->addWidget(base_CAndT1_2_S, 4, 0, 1, 1);
+
+        ProductNum_S = new QLineEdit(layoutWidget_2);
+        ProductNum_S->setObjectName(QStringLiteral("ProductNum_S"));
+
+        gridLayout_4->addWidget(ProductNum_S, 6, 0, 1, 1);
+
+        SearchHalfRadius_C_S = new QLineEdit(layoutWidget_2);
+        SearchHalfRadius_C_S->setObjectName(QStringLiteral("SearchHalfRadius_C_S"));
+
+        gridLayout_4->addWidget(SearchHalfRadius_C_S, 8, 0, 1, 1);
+
+        SearchHalfRadius_T_S = new QLineEdit(layoutWidget_2);
+        SearchHalfRadius_T_S->setObjectName(QStringLiteral("SearchHalfRadius_T_S"));
+
+        gridLayout_4->addWidget(SearchHalfRadius_T_S, 9, 0, 1, 1);
+
+        AreaC_HalfRadius_S = new QLineEdit(layoutWidget_2);
+        AreaC_HalfRadius_S->setObjectName(QStringLiteral("AreaC_HalfRadius_S"));
+
+        gridLayout_4->addWidget(AreaC_HalfRadius_S, 10, 0, 1, 1);
+
+        AreaT_HalfRadius_S = new QLineEdit(layoutWidget_2);
+        AreaT_HalfRadius_S->setObjectName(QStringLiteral("AreaT_HalfRadius_S"));
+
+        gridLayout_4->addWidget(AreaT_HalfRadius_S, 11, 0, 1, 1);
+
+        WinSize_S = new QLineEdit(layoutWidget_2);
+        WinSize_S->setObjectName(QStringLiteral("WinSize_S"));
+
+        gridLayout_4->addWidget(WinSize_S, 12, 0, 1, 1);
+
+        LimitEnabled_S = new QLineEdit(layoutWidget_2);
+        LimitEnabled_S->setObjectName(QStringLiteral("LimitEnabled_S"));
+
+        gridLayout_4->addWidget(LimitEnabled_S, 13, 0, 1, 1);
+
+        C_StepSize_S = new QLineEdit(layoutWidget_2);
+        C_StepSize_S->setObjectName(QStringLiteral("C_StepSize_S"));
+
+        gridLayout_4->addWidget(C_StepSize_S, 14, 0, 1, 1);
+
+        C_Magnitude_S = new QLineEdit(layoutWidget_2);
+        C_Magnitude_S->setObjectName(QStringLiteral("C_Magnitude_S"));
+
+        gridLayout_4->addWidget(C_Magnitude_S, 15, 0, 1, 1);
+
+        C_Min_S = new QLineEdit(layoutWidget_2);
+        C_Min_S->setObjectName(QStringLiteral("C_Min_S"));
+
+        gridLayout_4->addWidget(C_Min_S, 16, 0, 1, 1);
+
+        base_TAndEdge_S = new QLineEdit(layoutWidget_2);
+        base_TAndEdge_S->setObjectName(QStringLiteral("base_TAndEdge_S"));
+
+        gridLayout_4->addWidget(base_TAndEdge_S, 5, 0, 1, 1);
+
+
+        horizontalLayout_S->addLayout(gridLayout_4);
+
+        layoutWidget3 = new QWidget(page_2);
+        layoutWidget3->setObjectName(QStringLiteral("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(120, 10, 201, 74));
+        gridLayout_3 = new QGridLayout(layoutWidget3);
+        gridLayout_3->setSpacing(6);
+        gridLayout_3->setContentsMargins(11, 11, 11, 11);
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        gridLayout_3->setContentsMargins(0, 0, 0, 0);
+        ProductType_Name_S = new QLineEdit(layoutWidget3);
+        ProductType_Name_S->setObjectName(QStringLiteral("ProductType_Name_S"));
+
+        gridLayout_3->addWidget(ProductType_Name_S, 0, 0, 1, 1);
+
+        ProductSN_S = new QLineEdit(layoutWidget3);
+        ProductSN_S->setObjectName(QStringLiteral("ProductSN_S"));
+
+        gridLayout_3->addWidget(ProductSN_S, 1, 0, 1, 1);
+
+        time_S = new QLineEdit(layoutWidget3);
+        time_S->setObjectName(QStringLiteral("time_S"));
+
+        gridLayout_3->addWidget(time_S, 2, 0, 1, 1);
+
+        layoutWidget4 = new QWidget(page_2);
+        layoutWidget4->setObjectName(QStringLiteral("layoutWidget4"));
+        layoutWidget4->setGeometry(QRect(10, 10, 91, 71));
+        gridLayout_5 = new QGridLayout(layoutWidget4);
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setContentsMargins(11, 11, 11, 11);
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        gridLayout_5->setContentsMargins(0, 0, 0, 0);
+        Information_label1_S = new QLabel(layoutWidget4);
+        Information_label1_S->setObjectName(QStringLiteral("Information_label1_S"));
+        Information_label1_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_5->addWidget(Information_label1_S, 0, 0, 1, 1);
+
+        Information_label2_S = new QLabel(layoutWidget4);
+        Information_label2_S->setObjectName(QStringLiteral("Information_label2_S"));
+        Information_label2_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_5->addWidget(Information_label2_S, 1, 0, 1, 1);
+
+        Information_label3_S = new QLabel(layoutWidget4);
+        Information_label3_S->setObjectName(QStringLiteral("Information_label3_S"));
+        Information_label3_S->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_5->addWidget(Information_label3_S, 2, 0, 1, 1);
+
         stackedWidget->addWidget(page_2);
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(0);
         tabWidget->setCurrentIndex(0);
-        tabWidget_S->setCurrentIndex(0);
+        tabWidget_S->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1938,21 +1992,21 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "QRCode", Q_NULLPTR));
-        CH1_threshold2->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
-        CH1_threshold1->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
+        CH1_threshold2->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
+        CH1_threshold1->setText(QApplication::translate("MainWindow", "30", Q_NULLPTR));
         CheckBox1->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
-        CH1_name->setText(QApplication::translate("MainWindow", "AMP", Q_NULLPTR));
+        CH1_name->setText(QApplication::translate("MainWindow", "THC", Q_NULLPTR));
         CH1_label4->setText(QApplication::translate("MainWindow", "T1\351\230\210\345\200\2743", Q_NULLPTR));
         CH1_label3->setText(QApplication::translate("MainWindow", "T1\351\230\210\345\200\2742", Q_NULLPTR));
         CH1_label2->setText(QApplication::translate("MainWindow", "T1\351\230\210\345\200\2741", Q_NULLPTR));
         CH1_label1->setText(QApplication::translate("MainWindow", "T1\345\220\215\347\247\260", Q_NULLPTR));
-        CH1_threshold3->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
+        CH1_threshold3->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab1), QApplication::translate("MainWindow", "\350\257\225\345\211\202\346\235\2411", Q_NULLPTR));
-        CH2_threshold3->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
-        CH2_name->setText(QApplication::translate("MainWindow", "COC", Q_NULLPTR));
+        CH2_threshold3->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
+        CH2_name->setText(QApplication::translate("MainWindow", "OPI", Q_NULLPTR));
         CH2_label2->setText(QApplication::translate("MainWindow", "T2\351\230\210\345\200\2741", Q_NULLPTR));
-        CH2_threshold1->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
-        CH2_threshold2->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
+        CH2_threshold1->setText(QApplication::translate("MainWindow", "50", Q_NULLPTR));
+        CH2_threshold2->setText(QApplication::translate("MainWindow", "15", Q_NULLPTR));
         CheckBox2->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
         CH2_label3->setText(QApplication::translate("MainWindow", "T2\351\230\210\345\200\2742", Q_NULLPTR));
         CH2_label4->setText(QApplication::translate("MainWindow", "T2\351\230\210\345\200\2743", Q_NULLPTR));
@@ -2122,44 +2176,6 @@ public:
         QRlabel_C100->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         Generate_pushButton->setText(QApplication::translate("MainWindow", "Generate", Q_NULLPTR));
         pushButton_2->setText(QApplication::translate("MainWindow", "\345\210\207\346\215\242\350\207\263S100", Q_NULLPTR));
-        Information_label17->setText(QApplication::translate("MainWindow", "\346\255\245\351\225\277", Q_NULLPTR));
-        Information_label19->setText(QApplication::translate("MainWindow", "C\347\272\277\346\234\200\345\260\217\345\200\274", Q_NULLPTR));
-        Information_label2->setText(QApplication::translate("MainWindow", "\347\224\237\344\272\247\346\211\271\345\217\267", Q_NULLPTR));
-        Information_label6->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214\350\276\271\347\225\214", Q_NULLPTR));
-        Information_label8->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214T1\347\272\2772", Q_NULLPTR));
-        Information_label10->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\346\235\241\346\225\260", Q_NULLPTR));
-        Information_label12->setText(QApplication::translate("MainWindow", "T\347\272\277\347\232\204\346\220\234\347\264\242\350\214\203\345\233\264", Q_NULLPTR));
-        Information_label16->setText(QApplication::translate("MainWindow", "\344\275\277\350\203\275\347\272\246\346\235\237", Q_NULLPTR));
-        Information_label18->setText(QApplication::translate("MainWindow", "\345\271\205\345\272\246", Q_NULLPTR));
-        Information_label3->setText(QApplication::translate("MainWindow", "\345\217\215\345\272\224\346\227\266\351\227\264", Q_NULLPTR));
-        Information_label4->setText(QApplication::translate("MainWindow", "C\347\272\277\344\270\255\345\277\203\344\275\215\347\275\256", Q_NULLPTR));
-        Information_label5->setText(QApplication::translate("MainWindow", "T1\345\210\260C\347\272\277\344\270\255\345\277\203\344\275\215\347\275\256", Q_NULLPTR));
-        Information_label1->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260", Q_NULLPTR));
-        Information_label7->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214T1\347\272\2771", Q_NULLPTR));
-        Information_label9->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-T\347\272\277\345\222\214\350\276\271\347\225\214", Q_NULLPTR));
-        Information_label11->setText(QApplication::translate("MainWindow", "C\347\272\277\347\232\204\346\220\234\347\264\242\350\214\203\345\233\264", Q_NULLPTR));
-        Information_label15->setText(QApplication::translate("MainWindow", "\345\271\263\345\235\207\347\252\227\345\217\243", Q_NULLPTR));
-        Information_label13->setText(QApplication::translate("MainWindow", "C\347\272\277\347\232\204\350\256\241\347\256\227\345\215\212\345\276\204", Q_NULLPTR));
-        Information_label14->setText(QApplication::translate("MainWindow", "T\347\272\277\347\232\204\350\256\241\347\256\227\345\215\212\345\276\204", Q_NULLPTR));
-        ProductType_Name->setText(QApplication::translate("MainWindow", "Drug_Test", Q_NULLPTR));
-        ProductSN->setText(QApplication::translate("MainWindow", "20180724", Q_NULLPTR));
-        time->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
-        Center_LineC->setText(QApplication::translate("MainWindow", "40", Q_NULLPTR));
-        T1_Ccenter->setText(QApplication::translate("MainWindow", "60", Q_NULLPTR));
-        base_CAndEdge->setText(QApplication::translate("MainWindow", "25", Q_NULLPTR));
-        base_CAndT1_1->setText(QApplication::translate("MainWindow", "31", Q_NULLPTR));
-        base_CAndT1_2->setText(QApplication::translate("MainWindow", "31", Q_NULLPTR));
-        base_TAndEdge->setText(QApplication::translate("MainWindow", "95", Q_NULLPTR));
-        ProductNum->setText(QApplication::translate("MainWindow", "8", Q_NULLPTR));
-        SearchHalfRadius_C->setText(QApplication::translate("MainWindow", "30", Q_NULLPTR));
-        SearchHalfRadius_T->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
-        AreaC_HalfRadius->setText(QApplication::translate("MainWindow", "22", Q_NULLPTR));
-        AreaT_HalfRadius->setText(QApplication::translate("MainWindow", "14", Q_NULLPTR));
-        WinSize->setText(QApplication::translate("MainWindow", "10", Q_NULLPTR));
-        LimitEnabled->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
-        C_StepSize->setText(QApplication::translate("MainWindow", "3", Q_NULLPTR));
-        C_Magnitude->setText(QApplication::translate("MainWindow", "5", Q_NULLPTR));
-        C_Min->setText(QApplication::translate("MainWindow", "3000", Q_NULLPTR));
         textBrowser_4->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -2176,81 +2192,83 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\345\217\215\345\272\224\346\227\266\351\227\264\357\274\232\346\240\271\346\215\256\350\257\225\345\211\202\346\235\241\345\217\215\345\272\224\346\227\266\351\227\264\350\256\276\345\256\232</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\346\235\241\345\220\215\347\247\260\357\274\232</span><span style=\" font-size:10pt; color:#ff0000;\">\345\244\247\345\206\231\345\255\227\346\257\215"
                         "</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">\346\225\260\345\255\227</span><span style=\" font-size:10pt; color:#0055ff;\">\345\205\2616\344\275\215</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260\357\274\232</span><span style=\" font-size:10pt; color:#ff0000;\">\345\244\247\345\260\217\345\206\231\345\255\227\346\257\215</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">\346\225\260\345\255\227</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">_</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201\345\205\26119\344\275\215</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0"
-                        "px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260\357\274\232</span><span style=\" font-size:10pt; color:#ff0000;\">\345\244\247\345\260\217\345\206\231\345\255\227\346\257\215</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">\346\225\260\345\255\227</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">\347\251\272\346\240\274</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201\345\205\26119\344\275\215</span></p>\n"
+"<p style=\"-qt-paragraph-t"
+                        "ype:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">/********\347\224\250\346\210\267\345\217\257\346\233\264\346\224\271\351\241\271********/</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260\343\200\201\347\224\237\344\272\247\346\211\271\345\217\267</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-ind"
-                        "ent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\346\235\241\345\220\215\347\247\260\343\200\201\346\230\257\345\220\246\345\255\230\345\234\250</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-b"
+                        "lock-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\346\235\241\345\220\215\347\247\260\343\200\201\346\230\257\345\220\246\345\255\230\345\234\250</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\351\230\210\345\200\274*\343\200\201\345\217\215\345\272\224\346\227\266\351\227\264</span></p></body></html>", Q_NULLPTR));
+        groupBox->setTitle(QString());
+        Information_label17->setText(QApplication::translate("MainWindow", "\346\255\245\351\225\277", Q_NULLPTR));
+        Information_label19->setText(QApplication::translate("MainWindow", "C\347\272\277\346\234\200\345\260\217\345\200\274", Q_NULLPTR));
+        Information_label6->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214\350\276\271\347\225\214", Q_NULLPTR));
+        Information_label8->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214T1\347\272\2772", Q_NULLPTR));
+        Information_label10->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\346\235\241\346\225\260", Q_NULLPTR));
+        Information_label12->setText(QApplication::translate("MainWindow", "T\347\272\277\347\232\204\346\220\234\347\264\242\350\214\203\345\233\264", Q_NULLPTR));
+        Information_label16->setText(QApplication::translate("MainWindow", "\344\275\277\350\203\275\347\272\246\346\235\237", Q_NULLPTR));
+        Information_label18->setText(QApplication::translate("MainWindow", "\345\271\205\345\272\246", Q_NULLPTR));
+        Information_label4->setText(QApplication::translate("MainWindow", "C\347\272\277\344\270\255\345\277\203\344\275\215\347\275\256", Q_NULLPTR));
+        Information_label5->setText(QApplication::translate("MainWindow", "T1\345\210\260C\347\272\277\344\270\255\345\277\203\344\275\215\347\275\256", Q_NULLPTR));
+        Information_label7->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214T1\347\272\2771", Q_NULLPTR));
+        Information_label9->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-T\347\272\277\345\222\214\350\276\271\347\225\214", Q_NULLPTR));
+        Information_label11->setText(QApplication::translate("MainWindow", "C\347\272\277\347\232\204\346\220\234\347\264\242\350\214\203\345\233\264", Q_NULLPTR));
+        Information_label15->setText(QApplication::translate("MainWindow", "\345\271\263\345\235\207\347\252\227\345\217\243", Q_NULLPTR));
+        Information_label13->setText(QApplication::translate("MainWindow", "C\347\272\277\347\232\204\350\256\241\347\256\227\345\215\212\345\276\204", Q_NULLPTR));
+        Information_label14->setText(QApplication::translate("MainWindow", "T\347\272\277\347\232\204\350\256\241\347\256\227\345\215\212\345\276\204", Q_NULLPTR));
+        Center_LineC->setText(QApplication::translate("MainWindow", "40", Q_NULLPTR));
+        T1_Ccenter->setText(QApplication::translate("MainWindow", "60", Q_NULLPTR));
+        base_CAndEdge->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
+        base_CAndT1_1->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
+        base_TAndEdge->setText(QApplication::translate("MainWindow", "100", Q_NULLPTR));
+        ProductNum->setText(QApplication::translate("MainWindow", "8", Q_NULLPTR));
+        SearchHalfRadius_C->setText(QApplication::translate("MainWindow", "30", Q_NULLPTR));
+        SearchHalfRadius_T->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
+        AreaC_HalfRadius->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
+        AreaT_HalfRadius->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
+        WinSize->setText(QApplication::translate("MainWindow", "10", Q_NULLPTR));
+        LimitEnabled->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
+        C_StepSize->setText(QApplication::translate("MainWindow", "3", Q_NULLPTR));
+        C_Magnitude->setText(QApplication::translate("MainWindow", "5", Q_NULLPTR));
+        C_Min->setText(QApplication::translate("MainWindow", "3000", Q_NULLPTR));
+        base_CAndT1_2->setText(QApplication::translate("MainWindow", "45", Q_NULLPTR));
+        Information_label1->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260", Q_NULLPTR));
+        Information_label2->setText(QApplication::translate("MainWindow", "\347\224\237\344\272\247\346\211\271\345\217\267", Q_NULLPTR));
+        Information_label3->setText(QApplication::translate("MainWindow", "\345\217\215\345\272\224\346\227\266\351\227\264", Q_NULLPTR));
+        ProductType_Name->setText(QApplication::translate("MainWindow", "Drug Test", Q_NULLPTR));
+        ProductSN->setText(QApplication::translate("MainWindow", "20190101", Q_NULLPTR));
+        time->setText(QApplication::translate("MainWindow", "10", Q_NULLPTR));
+        Password_Bntton->setText(QString());
         pushButton->setText(QApplication::translate("MainWindow", "\345\210\207\346\215\242\350\207\263C100", Q_NULLPTR));
         QRlabel_S100->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         Generate_pushButton_S->setText(QApplication::translate("MainWindow", "Generate", Q_NULLPTR));
-        Information_label1_S->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260", Q_NULLPTR));
-        Information_label2_S->setText(QApplication::translate("MainWindow", "\347\224\237\344\272\247\346\211\271\345\217\267", Q_NULLPTR));
-        Information_label3_S->setText(QApplication::translate("MainWindow", "\345\217\215\345\272\224\346\227\266\351\227\264", Q_NULLPTR));
-        Information_label4_S->setText(QApplication::translate("MainWindow", "C\347\272\277\344\270\255\345\277\203\344\275\215\347\275\256", Q_NULLPTR));
-        Information_label5_S->setText(QApplication::translate("MainWindow", "T1\345\210\260C\347\272\277\344\270\255\345\277\203\344\275\215\347\275\256", Q_NULLPTR));
-        Information_label6_S->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214\350\276\271\347\225\214", Q_NULLPTR));
-        Information_label7_S->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214T1\347\272\2771", Q_NULLPTR));
-        Information_label8_S->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214T1\347\272\2772", Q_NULLPTR));
-        Information_label9_S->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-T\347\272\277\345\222\214\350\276\271\347\225\214", Q_NULLPTR));
-        Information_label10_S->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\346\235\241\346\225\260", Q_NULLPTR));
-        Information_label11_S->setText(QApplication::translate("MainWindow", "C\347\272\277\347\232\204\346\220\234\347\264\242\350\214\203\345\233\264", Q_NULLPTR));
-        Information_label12_S->setText(QApplication::translate("MainWindow", "T\347\272\277\347\232\204\346\220\234\347\264\242\350\214\203\345\233\264", Q_NULLPTR));
-        Information_label13_S->setText(QApplication::translate("MainWindow", "C\347\272\277\347\232\204\350\256\241\347\256\227\345\215\212\345\276\204", Q_NULLPTR));
-        Information_label14_S->setText(QApplication::translate("MainWindow", "T\347\272\277\347\232\204\350\256\241\347\256\227\345\215\212\345\276\204", Q_NULLPTR));
-        Information_label15_S->setText(QApplication::translate("MainWindow", "\345\271\263\345\235\207\347\252\227\345\217\243", Q_NULLPTR));
-        Information_label16_S->setText(QApplication::translate("MainWindow", "\344\275\277\350\203\275\347\272\246\346\235\237", Q_NULLPTR));
-        Information_label17_S->setText(QApplication::translate("MainWindow", "\346\255\245\351\225\277", Q_NULLPTR));
-        Information_label18_S->setText(QApplication::translate("MainWindow", "\345\271\205\345\272\246", Q_NULLPTR));
-        Information_label19_S->setText(QApplication::translate("MainWindow", "C\347\272\277\346\234\200\345\260\217\345\200\274", Q_NULLPTR));
-        ProductType_Name_S->setText(QApplication::translate("MainWindow", "Drug_Test", Q_NULLPTR));
-        ProductSN_S->setText(QApplication::translate("MainWindow", "20180724", Q_NULLPTR));
-        time_S->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
-        Center_LineC_S->setText(QApplication::translate("MainWindow", "40", Q_NULLPTR));
-        T1_Ccenter_S->setText(QApplication::translate("MainWindow", "62", Q_NULLPTR));
-        base_CAndEdge_S->setText(QApplication::translate("MainWindow", "25", Q_NULLPTR));
-        base_CAndT1_1_S->setText(QApplication::translate("MainWindow", "25", Q_NULLPTR));
-        base_CAndT1_2_S->setText(QApplication::translate("MainWindow", "35", Q_NULLPTR));
-        ProductNum_S->setText(QApplication::translate("MainWindow", "8", Q_NULLPTR));
-        SearchHalfRadius_C_S->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
-        SearchHalfRadius_T_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
-        AreaC_HalfRadius_S->setText(QApplication::translate("MainWindow", "22", Q_NULLPTR));
-        AreaT_HalfRadius_S->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
-        WinSize_S->setText(QApplication::translate("MainWindow", "10", Q_NULLPTR));
-        LimitEnabled_S->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
-        C_StepSize_S->setText(QApplication::translate("MainWindow", "3", Q_NULLPTR));
-        C_Magnitude_S->setText(QApplication::translate("MainWindow", "5", Q_NULLPTR));
-        C_Min_S->setText(QApplication::translate("MainWindow", "3000", Q_NULLPTR));
-        base_TAndEdge_S->setText(QApplication::translate("MainWindow", "84", Q_NULLPTR));
-        CH1_threshold2_S->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
-        CH1_threshold1_S->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
+        CH1_threshold2_S->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
+        CH1_threshold1_S->setText(QApplication::translate("MainWindow", "30", Q_NULLPTR));
         CheckBox1_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
-        CH1_name_S->setText(QApplication::translate("MainWindow", "AMP", Q_NULLPTR));
+        CH1_name_S->setText(QApplication::translate("MainWindow", "THC", Q_NULLPTR));
         CH1_label4_S->setText(QApplication::translate("MainWindow", "T1\351\230\210\345\200\2743", Q_NULLPTR));
         CH1_label3_S->setText(QApplication::translate("MainWindow", "T1\351\230\210\345\200\2742", Q_NULLPTR));
         CH1_label2_S->setText(QApplication::translate("MainWindow", "T1\351\230\210\345\200\2741", Q_NULLPTR));
         CH1_label1_S->setText(QApplication::translate("MainWindow", "T1\345\220\215\347\247\260", Q_NULLPTR));
-        CH1_threshold3_S->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
+        CH1_threshold3_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
         tabWidget_S->setTabText(tabWidget_S->indexOf(tab1_S), QApplication::translate("MainWindow", "\350\257\225\345\211\202\346\235\2411", Q_NULLPTR));
-        CH2_threshold3_S->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
-        CH2_name_S->setText(QApplication::translate("MainWindow", "COC", Q_NULLPTR));
+        CH2_threshold3_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
+        CH2_name_S->setText(QApplication::translate("MainWindow", "OPI", Q_NULLPTR));
         CH2_label2_S->setText(QApplication::translate("MainWindow", "T2\351\230\210\345\200\2741", Q_NULLPTR));
-        CH2_threshold1_S->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
-        CH2_threshold2_S->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
+        CH2_threshold1_S->setText(QApplication::translate("MainWindow", "50", Q_NULLPTR));
+        CH2_threshold2_S->setText(QApplication::translate("MainWindow", "15", Q_NULLPTR));
         CheckBox2_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
         CH2_label3_S->setText(QApplication::translate("MainWindow", "T2\351\230\210\345\200\2742", Q_NULLPTR));
         CH2_label4_S->setText(QApplication::translate("MainWindow", "T2\351\230\210\345\200\2743", Q_NULLPTR));
         CH2_label1_S->setText(QApplication::translate("MainWindow", "T2\345\220\215\347\247\260", Q_NULLPTR));
         tabWidget_S->setTabText(tabWidget_S->indexOf(tab2_S), QApplication::translate("MainWindow", "\350\257\225\345\211\202\346\235\2412", Q_NULLPTR));
-        CH3_threshold3_S->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
-        CH3_name_S->setText(QApplication::translate("MainWindow", "THC", Q_NULLPTR));
+        CH3_threshold3_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
+        CH3_name_S->setText(QApplication::translate("MainWindow", "COC", Q_NULLPTR));
         CH3_label2_S->setText(QApplication::translate("MainWindow", "T3\351\230\210\345\200\2741", Q_NULLPTR));
-        CH3_threshold1_S->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
-        CH3_threshold2_S->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
+        CH3_threshold1_S->setText(QApplication::translate("MainWindow", "50", Q_NULLPTR));
+        CH3_threshold2_S->setText(QApplication::translate("MainWindow", "15", Q_NULLPTR));
         CheckBox3_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
         CH3_label3_S->setText(QApplication::translate("MainWindow", "T3\351\230\210\345\200\2742", Q_NULLPTR));
         CH3_label4_S->setText(QApplication::translate("MainWindow", "T3\351\230\210\345\200\2743", Q_NULLPTR));
@@ -2259,52 +2277,52 @@ public:
         CH4_label4_S->setText(QApplication::translate("MainWindow", "T4\351\230\210\345\200\2743", Q_NULLPTR));
         CheckBox4_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
         CH4_label2_S->setText(QApplication::translate("MainWindow", "T4\351\230\210\345\200\2741", Q_NULLPTR));
-        CH4_name_S->setText(QApplication::translate("MainWindow", "WCG", Q_NULLPTR));
-        CH4_threshold3_S->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
+        CH4_name_S->setText(QApplication::translate("MainWindow", "AMP", Q_NULLPTR));
+        CH4_threshold3_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
         CH4_label1_S->setText(QApplication::translate("MainWindow", "T4\345\220\215\347\247\260", Q_NULLPTR));
-        CH4_threshold1_S->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
+        CH4_threshold1_S->setText(QApplication::translate("MainWindow", "35", Q_NULLPTR));
         CH4_label3_S->setText(QApplication::translate("MainWindow", "T4\351\230\210\345\200\2742", Q_NULLPTR));
-        CH4_threshold2_S->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
+        CH4_threshold2_S->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
         tabWidget_S->setTabText(tabWidget_S->indexOf(tab4_S), QApplication::translate("MainWindow", "\350\257\225\345\211\202\346\235\2414", Q_NULLPTR));
         CH5_label4_S->setText(QApplication::translate("MainWindow", "T5\351\230\210\345\200\2743", Q_NULLPTR));
         CheckBox5_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
         CH5_label2_S->setText(QApplication::translate("MainWindow", "T5\351\230\210\345\200\2741", Q_NULLPTR));
-        CH5_name_S->setText(QApplication::translate("MainWindow", "COP", Q_NULLPTR));
-        CH5_threshold3_S->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
+        CH5_name_S->setText(QApplication::translate("MainWindow", "MET", Q_NULLPTR));
+        CH5_threshold3_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
         CH5_label1_S->setText(QApplication::translate("MainWindow", "T5\345\220\215\347\247\260", Q_NULLPTR));
-        CH5_threshold1_S->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
+        CH5_threshold1_S->setText(QApplication::translate("MainWindow", "30", Q_NULLPTR));
         CH5_label3_S->setText(QApplication::translate("MainWindow", "T5\351\230\210\345\200\2742", Q_NULLPTR));
-        CH5_threshold2_S->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
+        CH5_threshold2_S->setText(QApplication::translate("MainWindow", "15", Q_NULLPTR));
         tabWidget_S->setTabText(tabWidget_S->indexOf(tab5_S), QApplication::translate("MainWindow", "\350\257\225\345\211\202\346\235\2415", Q_NULLPTR));
         CH6_label4_S->setText(QApplication::translate("MainWindow", "T6\351\230\210\345\200\2743", Q_NULLPTR));
         CheckBox6_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
         CH6_label2_S->setText(QApplication::translate("MainWindow", "T6\351\230\210\345\200\2741", Q_NULLPTR));
-        CH6_name_S->setText(QApplication::translate("MainWindow", "WEG", Q_NULLPTR));
-        CH6_threshold3_S->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
+        CH6_name_S->setText(QApplication::translate("MainWindow", "MDMA", Q_NULLPTR));
+        CH6_threshold3_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
         CH6_label1_S->setText(QApplication::translate("MainWindow", "T6\345\220\215\347\247\260", Q_NULLPTR));
-        CH6_threshold1_S->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
+        CH6_threshold1_S->setText(QApplication::translate("MainWindow", "50", Q_NULLPTR));
         CH6_label3_S->setText(QApplication::translate("MainWindow", "T6\351\230\210\345\200\2742", Q_NULLPTR));
-        CH6_threshold2_S->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
+        CH6_threshold2_S->setText(QApplication::translate("MainWindow", "15", Q_NULLPTR));
         tabWidget_S->setTabText(tabWidget_S->indexOf(tab6_S), QApplication::translate("MainWindow", "\350\257\225\345\211\202\346\235\2416", Q_NULLPTR));
         CH7_label4_S->setText(QApplication::translate("MainWindow", "T7\351\230\210\345\200\2743", Q_NULLPTR));
         CheckBox7_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
         CH7_label2_S->setText(QApplication::translate("MainWindow", "T7\351\230\210\345\200\2741", Q_NULLPTR));
-        CH7_name_S->setText(QApplication::translate("MainWindow", "EDG", Q_NULLPTR));
-        CH7_threshold3_S->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
+        CH7_name_S->setText(QApplication::translate("MainWindow", "OXY", Q_NULLPTR));
+        CH7_threshold3_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
         CH7_label1_S->setText(QApplication::translate("MainWindow", "T7\345\220\215\347\247\260", Q_NULLPTR));
-        CH7_threshold1_S->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
+        CH7_threshold1_S->setText(QApplication::translate("MainWindow", "50", Q_NULLPTR));
         CH7_label3_S->setText(QApplication::translate("MainWindow", "T7\351\230\210\345\200\2742", Q_NULLPTR));
-        CH7_threshold2_S->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
+        CH7_threshold2_S->setText(QApplication::translate("MainWindow", "15", Q_NULLPTR));
         tabWidget_S->setTabText(tabWidget_S->indexOf(tab7_S), QApplication::translate("MainWindow", "\350\257\225\345\211\202\346\235\2417", Q_NULLPTR));
         CH8_label4_S->setText(QApplication::translate("MainWindow", "T8\351\230\210\345\200\2743", Q_NULLPTR));
         CheckBox8_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
         CH8_label2_S->setText(QApplication::translate("MainWindow", "T8\351\230\210\345\200\2741", Q_NULLPTR));
-        CH8_name_S->setText(QApplication::translate("MainWindow", "UZI", Q_NULLPTR));
-        CH8_threshold3_S->setText(QApplication::translate("MainWindow", "1.86", Q_NULLPTR));
+        CH8_name_S->setText(QApplication::translate("MainWindow", "BZO", Q_NULLPTR));
+        CH8_threshold3_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
         CH8_label1_S->setText(QApplication::translate("MainWindow", "T8\345\220\215\347\247\260", Q_NULLPTR));
-        CH8_threshold1_S->setText(QApplication::translate("MainWindow", "6.76", Q_NULLPTR));
+        CH8_threshold1_S->setText(QApplication::translate("MainWindow", "50", Q_NULLPTR));
         CH8_label3_S->setText(QApplication::translate("MainWindow", "T8\351\230\210\345\200\2742", Q_NULLPTR));
-        CH8_threshold2_S->setText(QApplication::translate("MainWindow", "6.13", Q_NULLPTR));
+        CH8_threshold2_S->setText(QApplication::translate("MainWindow", "15", Q_NULLPTR));
         tabWidget_S->setTabText(tabWidget_S->indexOf(tab8_S), QApplication::translate("MainWindow", "\350\257\225\345\211\202\346\235\2418", Q_NULLPTR));
         CH9_label4_S->setText(QApplication::translate("MainWindow", "T9\351\230\210\345\200\2743", Q_NULLPTR));
         CheckBox9_S->setText(QApplication::translate("MainWindow", "  \346\230\257\345\220\246\345\255\230\345\234\250", Q_NULLPTR));
@@ -2343,15 +2361,54 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\345\217\215\345\272\224\346\227\266\351\227\264\357\274\232\346\240\271\346\215\256\350\257\225\345\211\202\346\235\241\345\217\215\345\272\224\346\227\266\351\227\264\350\256\276\345\256\232</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\346\235\241\345\220\215\347\247\260\357\274\232</span><span style=\" font-size:10pt; color:#ff0000;\">\345\244\247\345\206\231\345\255\227\346\257\215"
                         "</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">\346\225\260\345\255\227</span><span style=\" font-size:10pt; color:#0055ff;\">\345\205\2616\344\275\215</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260\357\274\232</span><span style=\" font-size:10pt; color:#ff0000;\">\345\244\247\345\260\217\345\206\231\345\255\227\346\257\215</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">\346\225\260\345\255\227</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">_</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201\345\205\26119\344\275\215</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0"
-                        "px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260\357\274\232</span><span style=\" font-size:10pt; color:#ff0000;\">\345\244\247\345\260\217\345\206\231\345\255\227\346\257\215</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">\346\225\260\345\255\227</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201</span><span style=\" font-size:10pt; color:#ff0000;\">\347\251\272\346\240\274</span><span style=\" font-size:10pt; color:#0055ff;\">\343\200\201\345\205\26119\344\275\215</span></p>\n"
+"<p style=\"-qt-paragraph-t"
+                        "ype:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; color:#0055ff;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">/********\347\224\250\346\210\267\345\217\257\346\233\264\346\224\271\351\241\271********/</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260\343\200\201\347\224\237\344\272\247\346\211\271\345\217\267</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-ind"
-                        "ent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\346\235\241\345\220\215\347\247\260\343\200\201\346\230\257\345\220\246\345\255\230\345\234\250</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-b"
+                        "lock-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\350\257\225\345\211\202\346\235\241\345\220\215\347\247\260\343\200\201\346\230\257\345\220\246\345\255\230\345\234\250</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt; color:#0055ff;\">\351\230\210\345\200\274*\343\200\201\345\217\215\345\272\224\346\227\266\351\227\264</span></p></body></html>", Q_NULLPTR));
+        groupBox_2->setTitle(QString());
+        Information_label4_S->setText(QApplication::translate("MainWindow", "C\347\272\277\344\270\255\345\277\203\344\275\215\347\275\256", Q_NULLPTR));
+        Information_label5_S->setText(QApplication::translate("MainWindow", "T1\345\210\260C\347\272\277\344\270\255\345\277\203\344\275\215\347\275\256", Q_NULLPTR));
+        Information_label6_S->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214\350\276\271\347\225\214", Q_NULLPTR));
+        Information_label7_S->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214T1\347\272\2771", Q_NULLPTR));
+        Information_label8_S->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-C\347\272\277\345\222\214T1\347\272\2772", Q_NULLPTR));
+        Information_label9_S->setText(QApplication::translate("MainWindow", "\345\237\272\347\272\277-T\347\272\277\345\222\214\350\276\271\347\225\214", Q_NULLPTR));
+        Information_label10_S->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\346\235\241\346\225\260", Q_NULLPTR));
+        Information_label11_S->setText(QApplication::translate("MainWindow", "C\347\272\277\347\232\204\346\220\234\347\264\242\350\214\203\345\233\264", Q_NULLPTR));
+        Information_label12_S->setText(QApplication::translate("MainWindow", "T\347\272\277\347\232\204\346\220\234\347\264\242\350\214\203\345\233\264", Q_NULLPTR));
+        Information_label13_S->setText(QApplication::translate("MainWindow", "C\347\272\277\347\232\204\350\256\241\347\256\227\345\215\212\345\276\204", Q_NULLPTR));
+        Information_label14_S->setText(QApplication::translate("MainWindow", "T\347\272\277\347\232\204\350\256\241\347\256\227\345\215\212\345\276\204", Q_NULLPTR));
+        Information_label15_S->setText(QApplication::translate("MainWindow", "\345\271\263\345\235\207\347\252\227\345\217\243", Q_NULLPTR));
+        Information_label16_S->setText(QApplication::translate("MainWindow", "\344\275\277\350\203\275\347\272\246\346\235\237", Q_NULLPTR));
+        Information_label17_S->setText(QApplication::translate("MainWindow", "\346\255\245\351\225\277", Q_NULLPTR));
+        Information_label18_S->setText(QApplication::translate("MainWindow", "\345\271\205\345\272\246", Q_NULLPTR));
+        Information_label19_S->setText(QApplication::translate("MainWindow", "C\347\272\277\346\234\200\345\260\217\345\200\274", Q_NULLPTR));
+        Center_LineC_S->setText(QApplication::translate("MainWindow", "40", Q_NULLPTR));
+        T1_Ccenter_S->setText(QApplication::translate("MainWindow", "62", Q_NULLPTR));
+        base_CAndEdge_S->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
+        base_CAndT1_1_S->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
+        base_CAndT1_2_S->setText(QApplication::translate("MainWindow", "40", Q_NULLPTR));
+        ProductNum_S->setText(QApplication::translate("MainWindow", "8", Q_NULLPTR));
+        SearchHalfRadius_C_S->setText(QApplication::translate("MainWindow", "30", Q_NULLPTR));
+        SearchHalfRadius_T_S->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
+        AreaC_HalfRadius_S->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
+        AreaT_HalfRadius_S->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
+        WinSize_S->setText(QApplication::translate("MainWindow", "10", Q_NULLPTR));
+        LimitEnabled_S->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
+        C_StepSize_S->setText(QApplication::translate("MainWindow", "3", Q_NULLPTR));
+        C_Magnitude_S->setText(QApplication::translate("MainWindow", "5", Q_NULLPTR));
+        C_Min_S->setText(QApplication::translate("MainWindow", "3000", Q_NULLPTR));
+        base_TAndEdge_S->setText(QApplication::translate("MainWindow", "92", Q_NULLPTR));
+        ProductType_Name_S->setText(QApplication::translate("MainWindow", "Drug Test", Q_NULLPTR));
+        ProductSN_S->setText(QApplication::translate("MainWindow", "20190101", Q_NULLPTR));
+        time_S->setText(QApplication::translate("MainWindow", "10", Q_NULLPTR));
+        Information_label1_S->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260", Q_NULLPTR));
+        Information_label2_S->setText(QApplication::translate("MainWindow", "\347\224\237\344\272\247\346\211\271\345\217\267", Q_NULLPTR));
+        Information_label3_S->setText(QApplication::translate("MainWindow", "\345\217\215\345\272\224\346\227\266\351\227\264", Q_NULLPTR));
     } // retranslateUi
 
 };
