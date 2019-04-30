@@ -7,6 +7,8 @@
 #include "QTextCodec"
 #include "QMessageBox"
 #include "QStandardPaths"
+#include "QTextStream"
+#include "QTextEdit"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -411,7 +413,6 @@ void MainWindow::on_pushButton_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-
 /* S100二维码 */
 void MainWindow::on_Generate_pushButton_S_clicked()
 {
@@ -600,7 +601,7 @@ void MainWindow::QRcode_Information_C100(void)
         str += "\t";
         str += "\t";
         str += ui->ProductType_Name->text();
-        str += "    C100";
+        str += "\tC100";
 
         str += "\n";
         str += "生产批号：";
@@ -613,7 +614,7 @@ void MainWindow::QRcode_Information_C100(void)
         str += "\t";
         str += "\t";
         str += ui->time->text();
-        str += "分钟";
+        str += "\t分钟";
 
         str += "\n";
         str += "C线中心位置：";
@@ -853,7 +854,7 @@ void MainWindow::QRcode_Information_C100(void)
         str += "\t";
         str +=  ui->CH7_threshold3->text();
         str += "\t";
-        str +=  ui->CH8_threshold3_S->text();
+        str +=  ui->CH8_threshold3->text();
         str += "\t";
         str +=  ui->CH9_threshold3->text();
         str += "\t";
@@ -910,6 +911,7 @@ void MainWindow::QRcode_Information_C100(void)
         str += QString::number(ui->CheckBox16->isChecked());
         str += "\t";
         str += QString::number(ui->CheckBox17->isChecked());
+        str += "\n";
 
         textStream<<str;
     }
@@ -935,7 +937,7 @@ void MainWindow::QRcode_Information_S100(void)
         str += "\t";
         str += "\t";
         str += ui->ProductType_Name_S->text();
-        str += "    S100";
+        str += "\tS100";
 
         str += "\n";
         str += "生产批号：";
@@ -948,7 +950,7 @@ void MainWindow::QRcode_Information_S100(void)
         str += "\t";
         str += "\t";
         str += ui->time_S->text();
-        str += "分钟";
+        str += "\t分钟";
 
         str += "\n";
         str += "C线中心位置：";
@@ -1152,6 +1154,7 @@ void MainWindow::QRcode_Information_S100(void)
         str += "\t";
         str += QString::number(ui->CheckBox8_S->isChecked());
         str += "\t";
+        str += "\n";
 
         textStream<<str;
     }
@@ -1165,9 +1168,1750 @@ void MainWindow::on_Password_Bntton_clicked()
     if(Password_Information->exec() == 1)
     {
         ui->groupBox->setEnabled(true);
+        ui->groupBox_2->setEnabled(true);
     }
     else
     {
         ui->groupBox->setEnabled(false);
+        ui->groupBox_2->setEnabled(false);
     }
+}
+
+void MainWindow::on_Import_Data_C100_clicked()
+{
+    QString sFilePath = QDir::currentPath();
+    sFilePath += "\\C100二维码信息.txt";
+    QFile file(sFilePath);
+    uint8 Count = 0,i = 0,Data_Count = 0,Plus_Count = 0;
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qDebug()<<"Can't open the file!"<<endl;
+    }
+    else
+    {
+
+        while(!file.atEnd())
+        {
+            Count += 1;
+            QByteArray line = file.readLine();
+            QString str(line);
+            QString Data_str;
+            qDebug()<<str<<endl;
+            switch(Count)
+            {
+            case 1:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 19;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->ProductType_Name->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 2:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->ProductSN->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 3:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->time->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 4:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->Center_LineC->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 5:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->T1_Ccenter->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 6:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->base_CAndEdge->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 7:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->base_CAndT1_1->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 8:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->base_CAndT1_2->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 9:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->base_TAndEdge->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 10:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->ProductNum->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 11:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 6;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->SearchHalfRadius_C->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 12:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 6;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->SearchHalfRadius_T->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 13:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 6;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->AreaC_HalfRadius->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 14:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->AreaT_HalfRadius->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 15:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->WinSize->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 16:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->LimitEnabled_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 17:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->C_StepSize->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 18:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->C_Magnitude->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 19:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 6;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->C_Min->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 24:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            ui->CH1_name->setText(Data_str);
+                            break;
+
+                        case 2:
+                            ui->CH2_name->setText(Data_str);
+                            break;
+
+                        case 3:
+                            ui->CH3_name->setText(Data_str);
+                            break;
+
+                        case 4:
+                            ui->CH4_name->setText(Data_str);
+                            break;
+
+                        case 5:
+                            ui->CH5_name->setText(Data_str);
+                            break;
+
+                        case 6:
+                            ui->CH6_name->setText(Data_str);
+                            break;
+
+                        case 7:
+                            ui->CH7_name->setText(Data_str);
+                            break;
+
+                        case 8:
+                            ui->CH8_name->setText(Data_str);
+                            break;
+
+                        case 9:
+                            ui->CH9_name->setText(Data_str);
+                            break;
+
+                        case 10:
+                            ui->CH10_name->setText(Data_str);
+                            break;
+
+                        case 11:
+                            ui->CH11_name->setText(Data_str);
+                            break;
+
+                        case 12:
+                            ui->CH12_name->setText(Data_str);
+                            break;
+
+                        case 13:
+                            ui->CH13_name->setText(Data_str);
+                            break;
+
+                        case 14:
+                            ui->CH14_name->setText(Data_str);
+                            break;
+
+                        case 15:
+                            ui->CH15_name->setText(Data_str);
+                            break;
+
+                        case 16:
+                            ui->CH16_name->setText(Data_str);
+                            break;
+                        case 17:
+                            ui->CH17_name->setText(Data_str);
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 26:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            ui->CH1_threshold1->setText(Data_str);
+                            break;
+
+                        case 2:
+                            ui->CH2_threshold1->setText(Data_str);
+                            break;
+
+                        case 3:
+                            ui->CH3_threshold1->setText(Data_str);
+                            break;
+
+                        case 4:
+                            ui->CH4_threshold1->setText(Data_str);
+                            break;
+
+                        case 5:
+                            ui->CH5_threshold1->setText(Data_str);
+                            break;
+
+                        case 6:
+                            ui->CH6_threshold1->setText(Data_str);
+                            break;
+
+                        case 7:
+                            ui->CH7_threshold1->setText(Data_str);
+                            break;
+
+                        case 8:
+                            ui->CH8_threshold1->setText(Data_str);
+                            break;
+
+                        case 9:
+                            ui->CH9_threshold1->setText(Data_str);
+                            break;
+
+                        case 10:
+                            ui->CH10_threshold1->setText(Data_str);
+                            break;
+
+                        case 11:
+                            ui->CH11_threshold1->setText(Data_str);
+                            break;
+
+                        case 12:
+                            ui->CH12_threshold1->setText(Data_str);
+                            break;
+
+                        case 13:
+                            ui->CH13_threshold1->setText(Data_str);
+                            break;
+
+                        case 14:
+                            ui->CH14_threshold1->setText(Data_str);
+                            break;
+
+                        case 15:
+                            ui->CH15_threshold1->setText(Data_str);
+                            break;
+
+                        case 16:
+                            ui->CH16_threshold1->setText(Data_str);
+                            break;
+
+                        case 17:
+                            ui->CH17_threshold1->setText(Data_str);
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 28:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            ui->CH1_threshold2->setText(Data_str);
+                            break;
+
+                        case 2:
+                            ui->CH2_threshold2->setText(Data_str);
+                            break;
+
+                        case 3:
+                            ui->CH3_threshold2->setText(Data_str);
+                            break;
+
+                        case 4:
+                            ui->CH4_threshold2->setText(Data_str);
+                            break;
+
+                        case 5:
+                            ui->CH5_threshold2->setText(Data_str);
+                            break;
+
+                        case 6:
+                            ui->CH6_threshold2->setText(Data_str);
+                            break;
+
+                        case 7:
+                            ui->CH7_threshold2->setText(Data_str);
+                            break;
+
+                        case 8:
+                            ui->CH8_threshold2->setText(Data_str);
+                            break;
+
+                        case 9:
+                            ui->CH9_threshold2->setText(Data_str);
+                            break;
+
+                        case 10:
+                            ui->CH10_threshold2->setText(Data_str);
+                            break;
+
+                        case 11:
+                            ui->CH11_threshold2->setText(Data_str);
+                            break;
+
+                        case 12:
+                            ui->CH12_threshold2->setText(Data_str);
+                            break;
+
+                        case 13:
+                            ui->CH13_threshold2->setText(Data_str);
+                            break;
+
+                        case 14:
+                            ui->CH14_threshold2->setText(Data_str);
+                            break;
+
+                        case 15:
+                            ui->CH15_threshold2->setText(Data_str);
+                            break;
+
+                        case 16:
+                            ui->CH16_threshold2->setText(Data_str);
+                            break;
+
+                        case 17:
+                            ui->CH17_threshold2->setText(Data_str);
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 30:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            ui->CH1_threshold3->setText(Data_str);
+                            break;
+
+                        case 2:
+                            ui->CH2_threshold3->setText(Data_str);
+                            break;
+
+                        case 3:
+                            ui->CH3_threshold3->setText(Data_str);
+                            break;
+
+                        case 4:
+                            ui->CH4_threshold3->setText(Data_str);
+                            break;
+
+                        case 5:
+                            ui->CH5_threshold3->setText(Data_str);
+                            break;
+
+                        case 6:
+                            ui->CH6_threshold3->setText(Data_str);
+                            break;
+
+                        case 7:
+                            ui->CH7_threshold3->setText(Data_str);
+                            break;
+
+                        case 8:
+                            ui->CH8_threshold3->setText(Data_str);
+                            break;
+
+                        case 9:
+                            ui->CH9_threshold3->setText(Data_str);
+                            break;
+
+                        case 10:
+                            ui->CH10_threshold3->setText(Data_str);
+                            break;
+
+                        case 11:
+                            ui->CH11_threshold3->setText(Data_str);
+                            break;
+
+                        case 12:
+                            ui->CH12_threshold3->setText(Data_str);
+                            break;
+
+                        case 13:
+                            ui->CH13_threshold3->setText(Data_str);
+                            break;
+
+                        case 14:
+                            ui->CH14_threshold3->setText(Data_str);
+                            break;
+
+                        case 15:
+                            ui->CH15_threshold3->setText(Data_str);
+                            break;
+
+                        case 16:
+                            ui->CH16_threshold3->setText(Data_str);
+                            break;
+
+                        case 17:
+                            ui->CH17_threshold3->setText(Data_str);
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 32:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i+1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 2;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        bool ok;
+                        int dec=Data_str.toInt(&ok,10);
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            (dec)? ui->CheckBox1->setChecked(true):ui->CheckBox1->setChecked(false);
+                            break;
+
+                        case 2:
+                            (dec)? ui->CheckBox2->setChecked(true):ui->CheckBox2->setChecked(false);
+                            break;
+
+                        case 3:
+                            (dec)? ui->CheckBox3->setChecked(true):ui->CheckBox3->setChecked(false);
+                            break;
+
+                        case 4:
+                            (dec)? ui->CheckBox4->setChecked(true):ui->CheckBox4->setChecked(false);
+                            break;
+
+                        case 5:
+                            (dec)? ui->CheckBox5->setChecked(true):ui->CheckBox5->setChecked(false);
+                            break;
+
+                        case 6:
+                            (dec)? ui->CheckBox6->setChecked(true):ui->CheckBox6->setChecked(false);
+                            break;
+
+                        case 7:
+                            (dec)? ui->CheckBox7->setChecked(true):ui->CheckBox7->setChecked(false);
+                            break;
+
+                        case 8:
+                            (dec)?(ui->CheckBox8->setChecked(true)):(ui->CheckBox8->setChecked(false));
+                            break;
+
+                        case 9:
+                            (dec)?(ui->CheckBox9->setChecked(true)):(ui->CheckBox9->setChecked(false));
+                            break;
+
+                        case 10:
+                            (dec)?(ui->CheckBox10->setChecked(true)):(ui->CheckBox10->setChecked(false));
+                            break;
+
+                        case 11:
+                            (dec)?(ui->CheckBox11->setChecked(true)):(ui->CheckBox11->setChecked(false));
+                            break;
+
+                        case 12:
+                            (dec)?(ui->CheckBox12->setChecked(true)):(ui->CheckBox12->setChecked(false));
+                            break;
+
+                        case 13:
+                            (dec)?(ui->CheckBox13->setChecked(true)):(ui->CheckBox13->setChecked(false));
+                            break;
+
+                        case 14:
+                            (dec)?(ui->CheckBox14->setChecked(true)):(ui->CheckBox14->setChecked(false));
+                            break;
+
+                        case 15:
+                            (dec)?(ui->CheckBox15->setChecked(true)):(ui->CheckBox15->setChecked(false));
+                            break;
+
+                        case 16:
+                            (dec)?(ui->CheckBox16->setChecked(true)):(ui->CheckBox16->setChecked(false));
+                            break;
+
+                        case 17:
+                            (dec)?(ui->CheckBox17->setChecked(true)):(ui->CheckBox17->setChecked(false));
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            default:
+                break;
+            }
+        str.clear();
+        }
+    }
+    on_Generate_pushButton_clicked();
+}
+
+void MainWindow::on_Import_Data_S100_clicked()
+{
+    QString sFilePath = QDir::currentPath();
+    sFilePath += "\\S100二维码信息.txt";
+    QFile file(sFilePath);
+    uint8 Count = 0,i = 0,Data_Count = 0,Plus_Count = 0;
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        qDebug()<<"Can't open the file!"<<endl;
+    }
+    else
+    {
+
+        while(!file.atEnd())
+        {
+            Count += 1;
+            QByteArray line = file.readLine();
+            QString str(line);
+            QString Data_str;
+            qDebug()<<str<<endl;
+            switch(Count)
+            {
+            case 1:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 19;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->ProductType_Name_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 2:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->ProductSN_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 3:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->time_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 4:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->Center_LineC_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 5:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->T1_Ccenter_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 6:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->base_CAndEdge_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 7:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->base_CAndT1_1_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 8:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->base_CAndT1_2_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 9:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->base_TAndEdge_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 10:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->ProductNum_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 11:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 6;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->SearchHalfRadius_C_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 12:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 6;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->SearchHalfRadius_T_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 13:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 6;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->AreaC_HalfRadius_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 14:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->AreaT_HalfRadius_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 15:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->WinSize_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 16:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->LimitEnabled_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 17:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->C_StepSize_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 18:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 4;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->C_Magnitude_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 19:
+                i = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        for(Data_Count = 0;Data_Count < 6;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        ui->C_Min_S->setText(Data_str);
+                        break;
+                    }
+                }
+                break;
+
+            case 24:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            ui->CH1_name_S->setText(Data_str);
+                            break;
+
+                        case 2:
+                            ui->CH2_name_S->setText(Data_str);
+                            break;
+
+                        case 3:
+                            ui->CH3_name_S->setText(Data_str);
+                            break;
+
+                        case 4:
+                            ui->CH4_name_S->setText(Data_str);
+                            break;
+
+                        case 5:
+                            ui->CH5_name_S->setText(Data_str);
+                            break;
+
+                        case 6:
+                            ui->CH6_name_S->setText(Data_str);
+                            break;
+
+                        case 7:
+                            ui->CH7_name_S->setText(Data_str);
+                            break;
+
+                        case 8:
+                            ui->CH8_name_S->setText(Data_str);
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 26:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            ui->CH1_threshold1_S->setText(Data_str);
+                            break;
+
+                        case 2:
+                            ui->CH2_threshold1_S->setText(Data_str);
+                            break;
+
+                        case 3:
+                            ui->CH3_threshold1_S->setText(Data_str);
+                            break;
+
+                        case 4:
+                            ui->CH4_threshold1_S->setText(Data_str);
+                            break;
+
+                        case 5:
+                            ui->CH5_threshold1_S->setText(Data_str);
+                            break;
+
+                        case 6:
+                            ui->CH6_threshold1_S->setText(Data_str);
+                            break;
+
+                        case 7:
+                            ui->CH7_threshold1_S->setText(Data_str);
+                            break;
+
+                        case 8:
+                            ui->CH8_threshold1_S->setText(Data_str);
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 28:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            ui->CH1_threshold2_S->setText(Data_str);
+                            break;
+
+                        case 2:
+                            ui->CH2_threshold2_S->setText(Data_str);
+                            break;
+
+                        case 3:
+                            ui->CH3_threshold2_S->setText(Data_str);
+                            break;
+
+                        case 4:
+                            ui->CH4_threshold2_S->setText(Data_str);
+                            break;
+
+                        case 5:
+                            ui->CH5_threshold2_S->setText(Data_str);
+                            break;
+
+                        case 6:
+                            ui->CH6_threshold2_S->setText(Data_str);
+                            break;
+
+                        case 7:
+                            ui->CH7_threshold2_S->setText(Data_str);
+                            break;
+
+                        case 8:
+                            ui->CH8_threshold2_S->setText(Data_str);
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 30:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i-1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 8;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            ui->CH1_threshold3_S->setText(Data_str);
+                            break;
+
+                        case 2:
+                            ui->CH2_threshold3_S->setText(Data_str);
+                            break;
+
+                        case 3:
+                            ui->CH3_threshold3_S->setText(Data_str);
+                            break;
+
+                        case 4:
+                            ui->CH4_threshold3_S->setText(Data_str);
+                            break;
+
+                        case 5:
+                            ui->CH5_threshold3_S->setText(Data_str);
+                            break;
+
+                        case 6:
+                            ui->CH6_threshold3_S->setText(Data_str);
+                            break;
+
+                        case 7:
+                            ui->CH7_threshold3_S->setText(Data_str);
+                            break;
+
+                        case 8:
+                            ui->CH8_threshold3_S->setText(Data_str);
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case 32:
+                i = 0;
+                Plus_Count = 0;
+                while(str[i++] !='\n')
+                {
+                    if((str[i] != '\t')  && (str[i+1] == '\t'))
+                    {
+                        Plus_Count += 1;
+                        Data_str.clear();
+                        for(Data_Count = 0;Data_Count < 2;Data_Count++)
+                        {
+                            if((str[i] != '\t')&&(str[i] != '\n'))
+                            {
+                                Data_str[Data_Count] = str[i++];
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+
+                        bool ok;
+                        int dec=Data_str.toInt(&ok,10);
+                        switch(Plus_Count)
+                        {
+                        case 1:
+                            (dec)?(ui->CheckBox1_S->setChecked(true)):(ui->CheckBox1_S->setChecked(false));
+                            break;
+
+                        case 2:
+                            (dec)?(ui->CheckBox2_S->setChecked(true)):(ui->CheckBox2_S->setChecked(false));
+                            break;
+
+                        case 3:
+                            (dec)?(ui->CheckBox3_S->setChecked(true)):(ui->CheckBox3_S->setChecked(false));
+                            break;
+
+                        case 4:
+                            (dec)?(ui->CheckBox4_S->setChecked(true)):(ui->CheckBox4_S->setChecked(false));
+                            break;
+
+                        case 5:
+                            (dec)?(ui->CheckBox5_S->setChecked(true)):(ui->CheckBox5_S->setChecked(false));
+                            break;
+
+                        case 6:
+                            (dec)?(ui->CheckBox6_S->setChecked(true)):(ui->CheckBox6_S->setChecked(false));
+                            break;
+
+                        case 7:
+                            (dec)?(ui->CheckBox7_S->setChecked(true)):(ui->CheckBox7_S->setChecked(false));
+                            break;
+
+                        case 8:
+                            (dec)?(ui->CheckBox8_S->setChecked(true)):(ui->CheckBox8_S->setChecked(false));
+                            break;
+
+                        default:
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            default:
+                break;
+            }
+        str.clear();
+        }
+    }
+    on_Generate_pushButton_S_clicked();
 }

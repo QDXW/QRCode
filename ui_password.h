@@ -70,6 +70,7 @@ public:
         label_name->setObjectName(QStringLiteral("label_name"));
         label_name->setGeometry(QRect(30, 40, 131, 51));
         label_name->setFont(font2);
+        label_name->setContextMenuPolicy(Qt::DefaultContextMenu);
         label_name->setFrameShape(QFrame::WinPanel);
         label_name->setFrameShadow(QFrame::Raised);
         Confirm = new QPushButton(Password);

@@ -91,6 +91,10 @@ private slots:
 
     void on_Password_Bntton_clicked();
 
+    void on_Import_Data_C100_clicked();
+
+    void on_Import_Data_S100_clicked();
+
 private:
     Password *Password_Information;
     Ui::MainWindow *ui;

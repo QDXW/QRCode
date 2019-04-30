@@ -269,6 +269,7 @@ public:
     QLineEdit *ProductSN;
     QLineEdit *time;
     QPushButton *Password_Bntton;
+    QPushButton *Import_Data_C100;
     QWidget *page_2;
     QPushButton *pushButton;
     QLabel *QRlabel_S100;
@@ -423,6 +424,7 @@ public:
     QLabel *Information_label1_S;
     QLabel *Information_label2_S;
     QLabel *Information_label3_S;
+    QPushButton *Import_Data_S100;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -1061,7 +1063,7 @@ public:
         tabWidget->addTab(tab_6, QString());
         Create_Image_pushButton = new QPushButton(page);
         Create_Image_pushButton->setObjectName(QStringLiteral("Create_Image_pushButton"));
-        Create_Image_pushButton->setGeometry(QRect(500, 730, 101, 51));
+        Create_Image_pushButton->setGeometry(QRect(630, 730, 101, 51));
         Create_Image_pushButton->setMinimumSize(QSize(101, 51));
         QRlabel_C100 = new QLabel(page);
         QRlabel_C100->setObjectName(QStringLiteral("QRlabel_C100"));
@@ -1085,7 +1087,7 @@ public:
         QRlabel_C100->setLineWidth(2);
         Generate_pushButton = new QPushButton(page);
         Generate_pushButton->setObjectName(QStringLiteral("Generate_pushButton"));
-        Generate_pushButton->setGeometry(QRect(240, 730, 101, 51));
+        Generate_pushButton->setGeometry(QRect(450, 730, 101, 51));
         Generate_pushButton->setMinimumSize(QSize(101, 51));
         pushButton_2 = new QPushButton(page);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
@@ -1345,6 +1347,10 @@ public:
         Password_Bntton->setObjectName(QStringLiteral("Password_Bntton"));
         Password_Bntton->setGeometry(QRect(0, 530, 211, 16));
         Password_Bntton->setFlat(true);
+        Import_Data_C100 = new QPushButton(page);
+        Import_Data_C100->setObjectName(QStringLiteral("Import_Data_C100"));
+        Import_Data_C100->setGeometry(QRect(270, 730, 101, 51));
+        Import_Data_C100->setMinimumSize(QSize(101, 51));
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName(QStringLiteral("page_2"));
@@ -1371,7 +1377,7 @@ public:
         QRlabel_S100->setLineWidth(2);
         Generate_pushButton_S = new QPushButton(page_2);
         Generate_pushButton_S->setObjectName(QStringLiteral("Generate_pushButton_S"));
-        Generate_pushButton_S->setGeometry(QRect(240, 730, 101, 51));
+        Generate_pushButton_S->setGeometry(QRect(450, 730, 101, 51));
         Generate_pushButton_S->setMinimumSize(QSize(101, 51));
         tabWidget_S = new QTabWidget(page_2);
         tabWidget_S->setObjectName(QStringLiteral("tabWidget_S"));
@@ -1723,7 +1729,7 @@ public:
         tabWidget_S->addTab(tab10_S, QString());
         Create_Image_pushButton_S = new QPushButton(page_2);
         Create_Image_pushButton_S->setObjectName(QStringLiteral("Create_Image_pushButton_S"));
-        Create_Image_pushButton_S->setGeometry(QRect(500, 730, 101, 51));
+        Create_Image_pushButton_S->setGeometry(QRect(630, 730, 101, 51));
         Create_Image_pushButton_S->setMinimumSize(QSize(101, 51));
         textBrowser_3 = new QTextBrowser(page_2);
         textBrowser_3->setObjectName(QStringLiteral("textBrowser_3"));
@@ -1976,6 +1982,10 @@ public:
 
         gridLayout_5->addWidget(Information_label3_S, 2, 0, 1, 1);
 
+        Import_Data_S100 = new QPushButton(page_2);
+        Import_Data_S100->setObjectName(QStringLiteral("Import_Data_S100"));
+        Import_Data_S100->setGeometry(QRect(270, 730, 101, 51));
+        Import_Data_S100->setMinimumSize(QSize(101, 51));
         stackedWidget->addWidget(page_2);
         MainWindow->setCentralWidget(centralWidget);
 
@@ -1983,7 +1993,7 @@ public:
 
         stackedWidget->setCurrentIndex(0);
         tabWidget->setCurrentIndex(0);
-        tabWidget_S->setCurrentIndex(7);
+        tabWidget_S->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2223,7 +2233,7 @@ public:
         base_CAndEdge->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
         base_CAndT1_1->setText(QApplication::translate("MainWindow", "20", Q_NULLPTR));
         base_TAndEdge->setText(QApplication::translate("MainWindow", "100", Q_NULLPTR));
-        ProductNum->setText(QApplication::translate("MainWindow", "8", Q_NULLPTR));
+        ProductNum->setText(QApplication::translate("MainWindow", "17", Q_NULLPTR));
         SearchHalfRadius_C->setText(QApplication::translate("MainWindow", "30", Q_NULLPTR));
         SearchHalfRadius_T->setText(QApplication::translate("MainWindow", "7", Q_NULLPTR));
         AreaC_HalfRadius->setText(QApplication::translate("MainWindow", "12", Q_NULLPTR));
@@ -2241,6 +2251,7 @@ public:
         ProductSN->setText(QApplication::translate("MainWindow", "20190101", Q_NULLPTR));
         time->setText(QApplication::translate("MainWindow", "10", Q_NULLPTR));
         Password_Bntton->setText(QString());
+        Import_Data_C100->setText(QApplication::translate("MainWindow", "Import", Q_NULLPTR));
         pushButton->setText(QApplication::translate("MainWindow", "\345\210\207\346\215\242\350\207\263C100", Q_NULLPTR));
         QRlabel_S100->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         Generate_pushButton_S->setText(QApplication::translate("MainWindow", "Generate", Q_NULLPTR));
@@ -2409,6 +2420,7 @@ public:
         Information_label1_S->setText(QApplication::translate("MainWindow", "\350\257\225\345\211\202\345\215\241\345\220\215\347\247\260", Q_NULLPTR));
         Information_label2_S->setText(QApplication::translate("MainWindow", "\347\224\237\344\272\247\346\211\271\345\217\267", Q_NULLPTR));
         Information_label3_S->setText(QApplication::translate("MainWindow", "\345\217\215\345\272\224\346\227\266\351\227\264", Q_NULLPTR));
+        Import_Data_S100->setText(QApplication::translate("MainWindow", "Import", Q_NULLPTR));
     } // retranslateUi
 
 };
