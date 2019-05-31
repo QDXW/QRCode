@@ -13,7 +13,6 @@
 #include <QDebug>
 #include <password.h>
 
-
 #define QRCODE_TEST_NAME_MAX 8
 
 /******************************************************************************/
@@ -69,8 +68,8 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void Init(void);
-    void QRcode_Information_C100(void);
-    void QRcode_Information_S100(void);
+    void QRcode_Information_C100(QString sFilePath);
+    void QRcode_Information_S100(QString sFilePath);
 
 private slots:
     /* C100生成图片按钮  */

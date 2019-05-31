@@ -9,6 +9,7 @@
 #include "QStandardPaths"
 #include "QTextStream"
 #include "QTextEdit"
+#include "QDateTime"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -28,6 +29,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 void MainWindow::Init(void)
 {
     /* 限定S100&C100试剂卡名称格式 */
@@ -227,6 +229,9 @@ void MainWindow::on_Generate_pushButton_clicked()
     ReagentSrtipQRcode.head.C_MIN = ui->C_Min->text().toInt();
     ReagentSrtipQRcode.head.Model = 4;
 
+//    ReagentSrtipQRcode.head.Invalied = 0x0a;
+//    ReagentSrtipQRcode.head.limitEnabled = 0x0d;
+
     /*3.2名称及阈值*/
     memcpy(ReagentSrtipQRcode.ch_data[0].TName,ui->CH1_name->text().toLatin1().data(),ui->CH1_name->text().toLatin1().length());
     ReagentSrtipQRcode.ch_data[0].Switch_Bool = ui->CheckBox1->isChecked();
@@ -373,11 +378,28 @@ void MainWindow::on_Create_Image_pushButton_clicked()
         QMessageBox::warning(this,tr("警告"),tr("没有图片数据"));
         return;
     }
-    QString dir = QFileDialog::getSaveFileName(this,
-                                               tr("文件保存"),
-                                               tr("/%1").arg(ui->ProductType_Name ->text()),
-                                               tr("(*.png)")
-                                                     );
+
+    QString sFilePath = QDir::currentPath();
+    QDir dir;
+    dir.cd(sFilePath);                      //进入某文件夹
+    if(!dir.exists("C100二维码信息"))        //判断需要创建的文件夹是否存在
+    {
+        dir.mkdir("C100二维码信息");         //创建文件夹
+    }
+
+    sFilePath += "\\C100二维码信息./C100-";
+    sFilePath += ui->ProductSN->text();
+    QString timePoint = QDateTime::currentDateTime().toString("yyyy-MM-dd HH-mm-ss");
+    QString path = QString("-%1").arg(timePoint);
+    sFilePath += path;
+    QRcode_Information_C100(sFilePath);
+    sFilePath += ".png";
+
+//    QString dir = QFileDialog::getSaveFileName(this,
+//                                               tr("文件保存"),
+//                                               tr("/%1").arg(ui->ProductType_Name ->text()),
+//                                               tr("(*.png)")
+//                                                     );
     QPixmap SavePixmap(QRPixmap->width()+WHITEEDGE,QRPixmap->width()+WHITEEDGE);
     SavePixmap.fill(Qt::white);
 
@@ -398,9 +420,9 @@ void MainWindow::on_Create_Image_pushButton_clicked()
     }
     else
     {
-        SavePixmap.save(dir);
+        SavePixmap.save(sFilePath);
+        QMessageBox::information(this,"温馨提醒","C100二维码信息保存成功",QMessageBox::Ok);
     }
-    QRcode_Information_C100();
 }
 
 void MainWindow::on_pushButton_2_clicked()
@@ -552,11 +574,28 @@ void MainWindow::on_Create_Image_pushButton_S_clicked()
         QMessageBox::warning(this,tr("警告"),tr("没有图片数据"));
         return;
     }
-    QString dir = QFileDialog::getSaveFileName(this,
-                                               tr("文件保存"),
-                                               tr("/%1").arg(ui->ProductType_Name ->text()),
-                                               tr("(*.png)")
-                                                     );
+
+    QString sFilePath = QDir::currentPath();
+    QDir dir;
+    dir.cd(sFilePath);                      //进入某文件夹
+    if(!dir.exists("S100二维码信息"))        //判断需要创建的文件夹是否存在
+    {
+        dir.mkdir("S100二维码信息");         //创建文件夹
+    }
+    sFilePath += "\\S100二维码信息./S100-";
+    sFilePath += ui->ProductSN->text();
+    QString timePoint = QDateTime::currentDateTime().toString("yyyy-MM-dd HH-mm-ss");
+    QString path = QString("-%1").arg(timePoint);
+    sFilePath += path;
+    QRcode_Information_S100(sFilePath);
+    sFilePath += ".png";
+
+//    QString dir = QFileDialog::getSaveFileName(this,
+//                                               tr("文件保存"),
+//                                               tr("/%1").arg(ui->ProductType_Name ->text()),
+//                                               tr("(*.png)")
+//                                                     );
+
     QPixmap SavePixmap(QRPixmap->width()+WHITEEDGE,QRPixmap->width()+WHITEEDGE);
     SavePixmap.fill(Qt::white);
 
@@ -577,17 +616,15 @@ void MainWindow::on_Create_Image_pushButton_S_clicked()
     }
     else
     {
-        SavePixmap.save(dir);
-    }
-
-    QRcode_Information_S100();
+        SavePixmap.save(sFilePath);
+        QMessageBox::information(this,"温馨提醒","S100二维码信息保存成功",QMessageBox::Ok);
+    } 
 }
 
-void MainWindow::QRcode_Information_C100(void)
+void MainWindow::QRcode_Information_C100(QString sFilePath)
 {
     quint8 i;
-    QString sFilePath = QDir::currentPath();
-    sFilePath += "\\C100二维码信息.txt";
+    sFilePath += ".txt";
     QFile file(sFilePath);
     if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
     {
@@ -919,11 +956,10 @@ void MainWindow::QRcode_Information_C100(void)
     file.close();
 }
 
-void MainWindow::QRcode_Information_S100(void)
+void MainWindow::QRcode_Information_S100(QString sFilePath)
 {
     quint8 i;
-    QString sFilePath = QDir::currentPath();
-    sFilePath += "\\S100二维码信息.txt";
+    sFilePath += ".txt";
     QFile file(sFilePath);
     if(!file.open(QIODevice::WriteOnly | QIODevice::Text))
     {
@@ -1180,8 +1216,13 @@ void MainWindow::on_Password_Bntton_clicked()
 void MainWindow::on_Import_Data_C100_clicked()
 {
     QString sFilePath = QDir::currentPath();
-    sFilePath += "\\C100二维码信息.txt";
-    QFile file(sFilePath);
+
+    QString fileName = QFileDialog::getOpenFileName(this,
+                                                        tr("文件对话框！"),
+                                                        sFilePath,
+                                                        tr("本本文件(*txt)"));
+//    qDebug()<<"filename : "<<fileName;
+    QFile file(fileName);
     uint8 Count = 0,i = 0,Data_Count = 0,Plus_Count = 0;
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -2053,70 +2094,88 @@ void MainWindow::on_Import_Data_C100_clicked()
                         switch(Plus_Count)
                         {
                         case 1:
+                            ui->CheckBox1->setChecked(false);
                             (dec)? ui->CheckBox1->setChecked(true):ui->CheckBox1->setChecked(false);
                             break;
 
                         case 2:
+                            ui->CheckBox2->setChecked(false);
                             (dec)? ui->CheckBox2->setChecked(true):ui->CheckBox2->setChecked(false);
                             break;
 
                         case 3:
+                            ui->CheckBox3->setChecked(false);
                             (dec)? ui->CheckBox3->setChecked(true):ui->CheckBox3->setChecked(false);
                             break;
 
                         case 4:
+                            ui->CheckBox4->setChecked(false);
                             (dec)? ui->CheckBox4->setChecked(true):ui->CheckBox4->setChecked(false);
                             break;
 
                         case 5:
+                            ui->CheckBox5->setChecked(false);
                             (dec)? ui->CheckBox5->setChecked(true):ui->CheckBox5->setChecked(false);
                             break;
 
                         case 6:
+                            ui->CheckBox6->setChecked(false);
                             (dec)? ui->CheckBox6->setChecked(true):ui->CheckBox6->setChecked(false);
                             break;
 
                         case 7:
+                            ui->CheckBox7->setChecked(false);
                             (dec)? ui->CheckBox7->setChecked(true):ui->CheckBox7->setChecked(false);
                             break;
 
                         case 8:
+                            ui->CheckBox8->setChecked(false);
                             (dec)?(ui->CheckBox8->setChecked(true)):(ui->CheckBox8->setChecked(false));
                             break;
 
                         case 9:
+                            ui->CheckBox9->setChecked(false);
                             (dec)?(ui->CheckBox9->setChecked(true)):(ui->CheckBox9->setChecked(false));
                             break;
 
                         case 10:
+                            ui->CheckBox10->setChecked(false);
                             (dec)?(ui->CheckBox10->setChecked(true)):(ui->CheckBox10->setChecked(false));
                             break;
 
                         case 11:
+                            ui->CheckBox11->setChecked(false);
                             (dec)?(ui->CheckBox11->setChecked(true)):(ui->CheckBox11->setChecked(false));
                             break;
 
                         case 12:
+                            ui->CheckBox12->setChecked(false);
                             (dec)?(ui->CheckBox12->setChecked(true)):(ui->CheckBox12->setChecked(false));
                             break;
 
                         case 13:
+                            ui->CheckBox13->setChecked(false);
                             (dec)?(ui->CheckBox13->setChecked(true)):(ui->CheckBox13->setChecked(false));
                             break;
 
                         case 14:
+                            ui->CheckBox14->setChecked(false);
                             (dec)?(ui->CheckBox14->setChecked(true)):(ui->CheckBox14->setChecked(false));
                             break;
 
                         case 15:
+                            ui->CheckBox15->setChecked(false);
                             (dec)?(ui->CheckBox15->setChecked(true)):(ui->CheckBox15->setChecked(false));
                             break;
 
                         case 16:
+                            ui->CheckBox16->setChecked(false);
+                                                        break;
                             (dec)?(ui->CheckBox16->setChecked(true)):(ui->CheckBox16->setChecked(false));
                             break;
 
                         case 17:
+                            ui->CheckBox17->setChecked(false);
                             (dec)?(ui->CheckBox17->setChecked(true)):(ui->CheckBox17->setChecked(false));
                             break;
 
@@ -2139,8 +2198,12 @@ void MainWindow::on_Import_Data_C100_clicked()
 void MainWindow::on_Import_Data_S100_clicked()
 {
     QString sFilePath = QDir::currentPath();
-    sFilePath += "\\S100二维码信息.txt";
-    QFile file(sFilePath);
+    QString fileName = QFileDialog::getOpenFileName(this,
+                                                        tr("文件对话框！"),
+                                                        sFilePath,
+                                                        tr("本本文件(*txt)"));
+//    qDebug()<<"filename : "<<fileName;
+    QFile file(fileName);
     uint8 Count = 0,i = 0,Data_Count = 0,Plus_Count = 0;
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
@@ -2869,34 +2932,42 @@ void MainWindow::on_Import_Data_S100_clicked()
                         switch(Plus_Count)
                         {
                         case 1:
+                            ui->CheckBox1_S->setChecked(false);
                             (dec)?(ui->CheckBox1_S->setChecked(true)):(ui->CheckBox1_S->setChecked(false));
                             break;
 
                         case 2:
+                            ui->CheckBox2_S->setChecked(false);
                             (dec)?(ui->CheckBox2_S->setChecked(true)):(ui->CheckBox2_S->setChecked(false));
                             break;
 
                         case 3:
+                            ui->CheckBox3_S->setChecked(false);
                             (dec)?(ui->CheckBox3_S->setChecked(true)):(ui->CheckBox3_S->setChecked(false));
                             break;
 
                         case 4:
+                            ui->CheckBox4_S->setChecked(false);
                             (dec)?(ui->CheckBox4_S->setChecked(true)):(ui->CheckBox4_S->setChecked(false));
                             break;
 
                         case 5:
+                            ui->CheckBox5_S->setChecked(false);
                             (dec)?(ui->CheckBox5_S->setChecked(true)):(ui->CheckBox5_S->setChecked(false));
                             break;
 
                         case 6:
+                            ui->CheckBox6_S->setChecked(false);
                             (dec)?(ui->CheckBox6_S->setChecked(true)):(ui->CheckBox6_S->setChecked(false));
                             break;
 
                         case 7:
+                            ui->CheckBox7_S->setChecked(false);
                             (dec)?(ui->CheckBox7_S->setChecked(true)):(ui->CheckBox7_S->setChecked(false));
                             break;
 
                         case 8:
+                            ui->CheckBox8_S->setChecked(false);
                             (dec)?(ui->CheckBox8_S->setChecked(true)):(ui->CheckBox8_S->setChecked(false));
                             break;
 
